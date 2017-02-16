@@ -1,0 +1,303 @@
+/*
+Theme Name: Initio
+*/
+body {
+	font-size: 14px;
+	font-size: 1rem;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.clear {
+    border: medium none !important;
+    clear: both !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 0 !important;
+}
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+img.size-full, 
+img.size-large, 
+img.header-image, 
+img.wp-post-image {
+    height: auto;
+    max-width: 100%;
+}
+
+
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.margin-top-50 {
+    margin-top: 50px;
+}
+
+
+a {
+	text-decoration: none;
+	color: #444444;
+}
+
+a:hover,
+a:focus {
+	text-decoration: none !important;	
+}
+
+code, pre {
+    background: -moz-linear-gradient(center top , #FFFFFF 50%, #F2F2F2 50%) repeat scroll 0 0 / 42px 42px transparent;
+    border: 1px solid #EEEEEE;
+    border-radius: 4px 4px 4px 4px;
+    color: #595A5C;
+    display: block;
+    font-family: monospace !important;
+    line-height: 21px !important;
+    padding: 21px 15px 20px;
+    white-space: pre-wrap;
+	margin: 10px 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+table th {
+    background: none repeat scroll 0 0 #EEEEEE;
+    border: 1px solid #DDDDDD;
+    color: #333333;
+    letter-spacing: 1px;
+    padding: 6px;
+    text-align: left;
+	line-height: 1.8em;
+}
+
+table td {
+    border: 1px solid #DDDDDD;
+    padding: 6px;
+    text-align: left;
+	line-height: 1.8em;
+}
+
+
+dl {
+	background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+dt {
+    font-weight: bold;
+	line-height: 26px;
+}
+
+hr {
+	border-left: none;
+	margin: 0;
+	border: 0;
+	background: transparent;
+	display: block;
+	border-bottom: 1px solid #efefef;
+	clear:both;
+	margin-bottom: 10px;
+}
+
+strong { 
+	font-weight: bold; 
+}
+
+ul,
+ol {
+	list-style: none;
+	margin: 0 0 24px 20px;
+}
+
+ul {
+	list-style: disc;
+}
+
+ul li,
+ol li {
+	line-height: 1.8em;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin: 0 0 0 20px;
+}
+
+
+blockquote {
+	border-left:4px solid;
+	margin-left: 20px;
+	margin-bottom: 15px;
+}
+
+address {
+	border-left:4px solid;
+	margin-left: 20px;
+	padding: 20px;
+	margin-bottom: 20px;
+	line-height: 1.4em;
+}
+
+.hidden { 
+	display: none; 
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption {
+	max-width: 100%;
+	padding: 4px;
+}
+
+.wp-caption .wp-caption-text,
+.gallery-caption,
+.entry-caption {
+	font-style: italic;
+	font-size: 12px;
+	font-size: 0.857142857rem;
+	line-height: 2;
+	color: #757575;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+img.alignleft {
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+img.alignright {
+	margin-left: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.sticky {
+
+}
+
+.bypostauthor {
+}
+
+.margin20 {
+    margin: 0 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	padding: 0.5em 0;
+	font-style: normal;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+h1,
+.h1 {
+	font-size: 1.6rem;
+	letter-spacing: -0.02em;
+}
+
+h2,
+.h2 {
+    font-size: 1.5rem;
+}
+
+h3,
+.h3 {
+    font-size: 1.4rem;
+}
+
+h4,
+.h4 {
+    font-size: 1.3rem;
+}
+
+h5,
+.h5 {
+    font-size: 1.2rem;
+}
+
+h6,
+.h6 {
+    font-size: 1.1rem;
+}
+
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.clearfix {
+    display: block;
+}
+
+p {
+	font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+	line-height: 1.8em;
+    margin: 0 0 1em;
+    padding: 0;
+    vertical-align: top;
+    word-wrap: break-word;
+}
+
+.no-margin {
+	margin:0 !important;
+}
+
+.no-padding {
+	padding:0 !important;
+}
+
+.normal {
+	font-weight: 400;
+}
+
+label {
+	width: 100%;
+}

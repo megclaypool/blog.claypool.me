@@ -1,0 +1,1015 @@
+# This file is distrubuted under the GPL-2.0+
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Seguente v1.0.1\n"
+"POT-Creation-Date: 2016-05-31 20:53-0400\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Vitaly Pinchev <info@vmthemes.com>\n"
+"Language-Team: VM Themes <info@vmthemes.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Textdomain-Support: yesX-Generator: Poedit 1.7.6\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x;esc_html_e;esc_html__;esc_attr_e;esc_attr__;"
+"_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;"
+"__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:13
+msgid "Error 404 - Page not found!"
+msgstr ""
+
+#: 404.php:14
+msgid "Sorry! It seems that the page you are looking for is not here."
+msgstr ""
+
+#: about-section.php:45
+msgid "Seguente WordPress Theme"
+msgstr ""
+
+#: breadcrumbs.php:12
+msgid "Home"
+msgstr ""
+
+#: breadcrumbs.php:38 title-section.php:18
+msgid "Tag: "
+msgstr ""
+
+#: breadcrumbs.php:40 breadcrumbs.php:41 breadcrumbs.php:42 title-section.php:21
+#: title-section.php:24 title-section.php:27
+msgid "Archive for "
+msgstr ""
+
+#: breadcrumbs.php:43 title-section.php:30
+msgid "Author: "
+msgstr ""
+
+#: breadcrumbs.php:44 title-section.php:33
+msgid "Blog Archives "
+msgstr ""
+
+#: breadcrumbs.php:45 title-section.php:36
+msgid "Search Results "
+msgstr ""
+
+#: comments.php:25
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:32 comments.php:50
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:33 comments.php:51
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:34 comments.php:52
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:57
+msgid "Comments are closed."
+msgstr ""
+
+#: content-none.php:13
+msgid "Nothing Found!"
+msgstr ""
+
+#: content-none.php:14
+msgid ""
+"Sorry, but nothing matched your search criteria. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: content-single.php:34 page-fullwidth.php:40 page-left-sidebar.php:40
+#: page-right-sidebar.php:40 page.php:40
+msgid "Tags:"
+msgstr ""
+
+#: content-single.php:36 image.php:29 page-fullwidth.php:42
+#: page-left-sidebar.php:42 page-right-sidebar.php:42 page.php:42
+msgid "Pages:"
+msgstr ""
+
+#: copyright.php:10
+msgid "Seguente Theme"
+msgstr ""
+
+#: copyright.php:10
+msgid " powered by "
+msgstr ""
+
+#: copyright.php:10
+msgid "WordPress"
+msgstr ""
+
+#: features-section.php:40
+msgid "Featured Image"
+msgstr ""
+
+#: features-section.php:60 services-section.php:91
+msgid "Responsive Design"
+msgstr ""
+
+#: features-section.php:61 features-section.php:68 features-section.php:75
+#: features-section.php:82
+msgid ""
+"Lorem ipsum dolor sit amet consectetur labore et dolore magna aliqua elit sed "
+"do. Mei an pericula euripidis."
+msgstr ""
+
+#: features-section.php:67
+msgid "Unlimited Colors"
+msgstr ""
+
+#: features-section.php:74
+msgid "Clean Code"
+msgstr ""
+
+#: features-section.php:81
+msgid "eCommerce Ready"
+msgstr ""
+
+#: fromblog-section.php:33 functions/seguente-customizer.php:70
+msgid "Slide"
+msgstr ""
+
+#: fromblog-section.php:40 post-formats.php:36 post-formats.php:57
+#, fuzzy
+msgid "Read More"
+msgstr "Подробнее"
+
+#: functions/seguente-customizer.php:28
+msgid "If you like our work. Buy us a coffee."
+msgstr ""
+
+#: functions/seguente-customizer.php:38
+msgid "Theme Support"
+msgstr ""
+
+#: functions/seguente-customizer.php:39
+msgid "View Theme Demo"
+msgstr ""
+
+#: functions/seguente-customizer.php:40
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: functions/seguente-customizer.php:67
+msgid "Ideal Image Slider"
+msgstr ""
+
+#: functions/seguente-customizer.php:67
+msgid "Unslider"
+msgstr ""
+
+#: functions/seguente-customizer.php:70
+msgid "Fade"
+msgstr ""
+
+#: functions/seguente-customizer.php:73
+msgid "No Sidebars"
+msgstr ""
+
+#: functions/seguente-customizer.php:73
+msgid "Right Sidebar"
+msgstr ""
+
+#: functions/seguente-customizer.php:73
+msgid "Left Sidebar"
+msgstr ""
+
+#: functions/seguente-customizer.php:76
+msgid "Excerpt"
+msgstr ""
+
+#: functions/seguente-customizer.php:76
+msgid "Full Content"
+msgstr ""
+
+#: functions/seguente-customizer.php:80 functions/seguente-customizer.php:88
+msgid "Disable"
+msgstr ""
+
+#: functions/seguente-customizer.php:81 functions/seguente-functions.php:166
+msgid "Main Sidebar"
+msgstr ""
+
+#: functions/seguente-customizer.php:82
+msgid "Below Content"
+msgstr ""
+
+#: functions/seguente-customizer.php:89
+msgid "Above Content"
+msgstr ""
+
+#: functions/seguente-customizer.php:107
+msgid "Seguente Theme Options"
+msgstr ""
+
+#: functions/seguente-customizer.php:114
+msgid "Theme Information"
+msgstr ""
+
+#: functions/seguente-customizer.php:127
+msgid " "
+msgstr ""
+
+#: functions/seguente-customizer.php:136
+msgid "General Settings"
+msgstr ""
+
+#: functions/seguente-customizer.php:149
+msgid "Theme Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:163
+msgid "Display Breadcrumbs"
+msgstr ""
+
+#: functions/seguente-customizer.php:177
+msgid "Enable Animation"
+msgstr ""
+
+#: functions/seguente-customizer.php:191
+msgid "Enable Responsive Design"
+msgstr ""
+
+#: functions/seguente-customizer.php:205
+msgid "Enable Scrollup"
+msgstr ""
+
+#: functions/seguente-customizer.php:218
+msgid "ScrollUp Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:231
+msgid "ScrollUp Hover Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:241
+msgid "Logo Settings"
+msgstr ""
+
+#: functions/seguente-customizer.php:244
+msgid ""
+"To upload custom logo image - go to Appearance > Customize > Site Identity"
+msgstr ""
+
+#: functions/seguente-customizer.php:256
+msgid "Logo Width (px)"
+msgstr ""
+
+#: functions/seguente-customizer.php:270
+msgid "Logo Height (px)"
+msgstr ""
+
+#: functions/seguente-customizer.php:284
+msgid "Logo Top Margin (px)"
+msgstr ""
+
+#: functions/seguente-customizer.php:298
+msgid "Logo Left Margin (px)"
+msgstr ""
+
+#: functions/seguente-customizer.php:312
+msgid "Logo Bottom Margin (px)"
+msgstr ""
+
+#: functions/seguente-customizer.php:326
+msgid "Logo Right Margin (px)"
+msgstr ""
+
+#: functions/seguente-customizer.php:340
+msgid "Logo Uppercase"
+msgstr ""
+
+#: functions/seguente-customizer.php:355
+msgid "Select logo font family"
+msgstr ""
+
+#: functions/seguente-customizer.php:370
+msgid "Logo Font Size (px)"
+msgstr ""
+
+#: functions/seguente-customizer.php:384
+msgid "Logo Font Weight"
+msgstr ""
+
+#: functions/seguente-customizer.php:397
+msgid "Logo Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:411
+msgid "Display Tagline Underneath Logo"
+msgstr ""
+
+#: functions/seguente-customizer.php:425
+msgid "Tagline Font Size (px)"
+msgstr ""
+
+#: functions/seguente-customizer.php:438
+msgid "Tagline Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:452
+msgid "Tagline Uppercase"
+msgstr ""
+
+#: functions/seguente-customizer.php:461
+msgid "Navigation Settings"
+msgstr ""
+
+#: functions/seguente-customizer.php:475
+msgid "Sticky Menu"
+msgstr ""
+
+#: functions/seguente-customizer.php:489
+msgid "Menu Top Margin (px)"
+msgstr ""
+
+#: functions/seguente-customizer.php:504
+msgid "Select Menu Font Family"
+msgstr ""
+
+#: functions/seguente-customizer.php:519
+msgid "Menu Font Size (px)"
+msgstr ""
+
+#: functions/seguente-customizer.php:533
+msgid "Menu Uppercase"
+msgstr ""
+
+#: functions/seguente-customizer.php:546
+msgid "Navigation Menu Font Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:559
+msgid "Navigation Sub Menu Font Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:572
+msgid "Navigation Menu Border Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:585
+msgid "Navigation Menu Background Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:598
+msgid "SubMenu Background Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:611
+msgid "Menu Hover Font Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:624
+msgid "Menu Background Hover Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:637
+msgid "Selected Menu Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:645
+msgid "Typography Settings"
+msgstr ""
+
+#: functions/seguente-customizer.php:660
+msgid "Select Body Font Family"
+msgstr ""
+
+#: functions/seguente-customizer.php:675
+msgid "Body Font Size (px)"
+msgstr ""
+
+#: functions/seguente-customizer.php:688
+msgid "Body Font Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:696
+msgid "Header Settings"
+msgstr ""
+
+#: functions/seguente-customizer.php:709
+msgid "Header Background Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:723
+msgid "Header Background Color Opacity"
+msgstr ""
+
+#: functions/seguente-customizer.php:739
+msgid "Display Top Header Section"
+msgstr ""
+
+#: functions/seguente-customizer.php:753
+msgid "Address"
+msgstr ""
+
+#: functions/seguente-customizer.php:767
+msgid "Phone Number"
+msgstr ""
+
+#: functions/seguente-customizer.php:781
+msgid "Email"
+msgstr ""
+
+#: functions/seguente-customizer.php:794 functions/seguente-customizer.php:1452
+msgid "Top Section Font Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:807
+msgid "Top Section Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:815
+msgid "Home Page Settings"
+msgstr ""
+
+#: functions/seguente-customizer.php:829
+msgid "Enable Image Slider"
+msgstr ""
+
+#: functions/seguente-customizer.php:843
+msgid "Display About Section"
+msgstr ""
+
+#: functions/seguente-customizer.php:857
+msgid "Display Features Section"
+msgstr ""
+
+#: functions/seguente-customizer.php:871
+msgid "Display Services Section"
+msgstr ""
+
+#: functions/seguente-customizer.php:885
+msgid "Display Get In Touch Section"
+msgstr ""
+
+#: functions/seguente-customizer.php:899
+msgid "Display Latest News Section"
+msgstr ""
+
+#: functions/seguente-customizer.php:913
+msgid "Display Blog Posts"
+msgstr ""
+
+#: functions/seguente-customizer.php:927
+msgid "Display Social Links"
+msgstr ""
+
+#: functions/seguente-customizer.php:935
+msgid "Image Slider Settings"
+msgstr ""
+
+#: functions/seguente-customizer.php:949
+msgid "Default Image Slider"
+msgstr ""
+
+#: functions/seguente-customizer.php:965
+msgid "Image Slider Height (px)"
+msgstr ""
+
+#: functions/seguente-customizer.php:979
+msgid "Image Slider Category"
+msgstr ""
+
+#: functions/seguente-customizer.php:995
+msgid "Slideshow Interval"
+msgstr ""
+
+#: functions/seguente-customizer.php:998
+msgid "1000 = 1 second, default value: 5000"
+msgstr ""
+
+#: functions/seguente-customizer.php:1010
+msgid "Animation Speed"
+msgstr ""
+
+#: functions/seguente-customizer.php:1013
+msgid "1000 = 1 second, default value: 800"
+msgstr ""
+
+#: functions/seguente-customizer.php:1025
+msgid "Number of Slides"
+msgstr ""
+
+#: functions/seguente-customizer.php:1039
+msgid "Image Slider Effect"
+msgstr ""
+
+#: functions/seguente-customizer.php:1044
+msgid "Can be only used with Ideal Image Slider"
+msgstr ""
+
+#: functions/seguente-customizer.php:1056
+msgid "Enable Slider Captions"
+msgstr ""
+
+#: functions/seguente-customizer.php:1070
+msgid "Caption Position Top (px)"
+msgstr ""
+
+#: functions/seguente-customizer.php:1084
+msgid "Caption Width %"
+msgstr ""
+
+#: functions/seguente-customizer.php:1098
+msgid "Caption Title Font Size px"
+msgstr ""
+
+#: functions/seguente-customizer.php:1112
+msgid "Caption Text Font Size px"
+msgstr ""
+
+#: functions/seguente-customizer.php:1126
+msgid "Enable Captions Background"
+msgstr ""
+
+#: functions/seguente-customizer.php:1139
+msgid "Captions Background Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:1153
+msgid "Captions Background Color Opacity"
+msgstr ""
+
+#: functions/seguente-customizer.php:1168
+msgid "Caption Title Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:1181
+msgid "Captions Text Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:1194
+msgid "Captions Button Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:1197 functions/seguente-customizer.php:1212
+#: functions/seguente-customizer.php:1227 functions/seguente-customizer.php:1242
+msgid "Can be only used with Unslider Image Slider"
+msgstr ""
+
+#: functions/seguente-customizer.php:1209
+msgid "Enable Captions Button"
+msgstr ""
+
+#: functions/seguente-customizer.php:1224
+msgid "Captions Button Text"
+msgstr ""
+
+#: functions/seguente-customizer.php:1239
+msgid "Enable Slider Dots"
+msgstr ""
+
+#: functions/seguente-customizer.php:1248
+msgid "Footer Settings"
+msgstr ""
+
+#: functions/seguente-customizer.php:1261
+msgid "Footer Background Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:1274
+msgid "Copyright Section Background Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:1287
+msgid "Footer Widget Title Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:1300
+msgid "Footer Widget Title Border Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:1313
+msgid "Footer Widget Text Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:1326
+msgid "Footer Widget Text Border Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:1339
+msgid "Footer Social Icons Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:1353
+msgid "Enable Footer Widgets"
+msgstr ""
+
+#: functions/seguente-customizer.php:1367
+msgid "Copyright Text"
+msgstr ""
+
+#: functions/seguente-customizer.php:1375
+msgid "Layout Settings"
+msgstr ""
+
+#: functions/seguente-customizer.php:1390
+msgid "Theme Layout"
+msgstr ""
+
+#: functions/seguente-customizer.php:1399
+msgid "Blog Settings"
+msgstr ""
+
+#: functions/seguente-customizer.php:1412 functions/seguente-customizer.php:1593
+#: functions/seguente-customizer.php:1668 functions/seguente-customizer.php:1948
+#: functions/seguente-customizer.php:2069 functions/seguente-customizer.php:2157
+#: functions/seguente-customizer.php:2276
+msgid "Background Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:1426 functions/seguente-customizer.php:1607
+#: functions/seguente-customizer.php:1682 functions/seguente-customizer.php:1962
+#: functions/seguente-customizer.php:2083 functions/seguente-customizer.php:2171
+#: functions/seguente-customizer.php:2290
+msgid "Background Image"
+msgstr ""
+
+#: functions/seguente-customizer.php:1439
+msgid "Top Section Background Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:1466
+msgid "Top Section Image"
+msgstr ""
+
+#: functions/seguente-customizer.php:1482
+msgid "Blog Content"
+msgstr ""
+
+#: functions/seguente-customizer.php:1497
+msgid "Blog Excerpt Length"
+msgstr ""
+
+#: functions/seguente-customizer.php:1511
+msgid "Use Simple Pagination"
+msgstr ""
+
+#: functions/seguente-customizer.php:1526
+msgid "Post Navigation Links"
+msgstr ""
+
+#: functions/seguente-customizer.php:1542
+msgid "Post Info Position"
+msgstr ""
+
+#: functions/seguente-customizer.php:1557
+msgid "Featured Image Inside the Post"
+msgstr ""
+
+#: functions/seguente-customizer.php:1565
+msgid "About Us Section"
+msgstr ""
+
+#: functions/seguente-customizer.php:1578
+msgid "About Us Page"
+msgstr ""
+
+#: functions/seguente-customizer.php:1582
+msgid "Select Page to Display in About Us Section"
+msgstr ""
+
+#: functions/seguente-customizer.php:1620 functions/seguente-customizer.php:1695
+#: functions/seguente-customizer.php:1975 functions/seguente-customizer.php:2096
+#: functions/seguente-customizer.php:2228
+msgid "Title Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:1634 functions/seguente-customizer.php:2123
+msgid "Button Text"
+msgstr ""
+
+#: functions/seguente-customizer.php:1647 functions/seguente-customizer.php:2136
+#: functions/seguente-customizer.php:2254
+msgid "Button Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:1655
+msgid "Features Section"
+msgstr ""
+
+#: functions/seguente-customizer.php:1708
+msgid "Text Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:1721
+msgid "Incons Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:1734
+msgid "Squares Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:1748
+msgid "Icons Size (px)"
+msgstr ""
+
+#: functions/seguente-customizer.php:1762
+msgid "Feature #1"
+msgstr ""
+
+#: functions/seguente-customizer.php:1766 functions/seguente-customizer.php:1810
+#: functions/seguente-customizer.php:1856 functions/seguente-customizer.php:1900
+msgid "Select Page to Display as One of the Features"
+msgstr ""
+
+#: functions/seguente-customizer.php:1778
+msgid "Feature #1 Icon"
+msgstr ""
+
+#: functions/seguente-customizer.php:1781 functions/seguente-customizer.php:1825
+#: functions/seguente-customizer.php:1871 functions/seguente-customizer.php:1915
+#, php-format
+msgid ""
+"Enter Font Awesome icon name. For icon name refer to: <a href=\"%1$s\" target="
+"\"_blank\">Font Awesome Website</a>"
+msgstr ""
+
+#: functions/seguente-customizer.php:1793
+msgid "Feature #1 Image"
+msgstr ""
+
+#: functions/seguente-customizer.php:1806
+msgid "Feature #2"
+msgstr ""
+
+#: functions/seguente-customizer.php:1822
+msgid "Feature #2 Icon"
+msgstr ""
+
+#: functions/seguente-customizer.php:1837
+msgid "Feature #2 Image"
+msgstr ""
+
+#: functions/seguente-customizer.php:1852
+msgid "Feature #3"
+msgstr ""
+
+#: functions/seguente-customizer.php:1868
+msgid "Feature #3 Icon"
+msgstr ""
+
+#: functions/seguente-customizer.php:1883
+msgid "Feature #3 Image"
+msgstr ""
+
+#: functions/seguente-customizer.php:1896
+msgid "Feature #4"
+msgstr ""
+
+#: functions/seguente-customizer.php:1912
+msgid "Feature #4 Icon"
+msgstr ""
+
+#: functions/seguente-customizer.php:1927
+msgid "Feature #4 Image"
+msgstr ""
+
+#: functions/seguente-customizer.php:1935
+msgid "Services Section"
+msgstr ""
+
+#: functions/seguente-customizer.php:1988
+msgid "Section Text Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:2001
+msgid "Section Icons Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:2015
+msgid "Service #"
+msgstr ""
+
+#: functions/seguente-customizer.php:2019
+msgid "Select Page to Display as One of the Services"
+msgstr ""
+
+#: functions/seguente-customizer.php:2031
+msgid "Icon to Display in Box #"
+msgstr ""
+
+#: functions/seguente-customizer.php:2034
+#, php-format
+msgid ""
+"Enter Font Awesome icon name. For example: fa-coffee. For icon name refer to: "
+"<a href=\"%1$s\" target=\"_blank\">Font Awesome Website</a>"
+msgstr ""
+
+#: functions/seguente-customizer.php:2041
+msgid "Get In Touch Section"
+msgstr ""
+
+#: functions/seguente-customizer.php:2054
+msgid "Get In Touch Page"
+msgstr ""
+
+#: functions/seguente-customizer.php:2058
+msgid "Select Page to Display in Get In Touch Section"
+msgstr ""
+
+#: functions/seguente-customizer.php:2109
+msgid "Subtitle Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:2144
+msgid "Latest News Section"
+msgstr ""
+
+#: functions/seguente-customizer.php:2185
+msgid "Latest News Category"
+msgstr ""
+
+#: functions/seguente-customizer.php:2201
+msgid "Number of Posts"
+msgstr ""
+
+#: functions/seguente-customizer.php:2215
+msgid "Title Text"
+msgstr ""
+
+#: functions/seguente-customizer.php:2241
+msgid "Post Title Color"
+msgstr ""
+
+#: functions/seguente-customizer.php:2262
+msgid "Social Links"
+msgstr ""
+
+#: functions/seguente-customizer.php:2265
+msgid "Enter your profile URL. To remove it, just leave it blank"
+msgstr ""
+
+#: functions/seguente-customizer.php:2304 social-section.php:16
+#: top-header.php:12
+msgid "Facebook"
+msgstr ""
+
+#: functions/seguente-customizer.php:2318 social-section.php:19
+#: top-header.php:15
+msgid "Twitter"
+msgstr ""
+
+#: functions/seguente-customizer.php:2332
+msgid "Google Plus"
+msgstr ""
+
+#: functions/seguente-customizer.php:2346 social-section.php:25
+#: top-header.php:21
+msgid "LinkedIn"
+msgstr ""
+
+#: functions/seguente-customizer.php:2360 social-section.php:28
+#: top-header.php:24
+msgid "Instagram"
+msgstr ""
+
+#: functions/seguente-customizer.php:2374 social-section.php:31
+#: top-header.php:27
+msgid "Vimeo"
+msgstr ""
+
+#: functions/seguente-functions.php:45
+msgid "Primary Menu"
+msgstr ""
+
+#: functions/seguente-functions.php:175
+msgid "Footer Widget 1"
+msgstr ""
+
+#: functions/seguente-functions.php:184
+msgid "Footer Widget 2"
+msgstr ""
+
+#: functions/seguente-functions.php:193
+msgid "Footer Widget 3"
+msgstr ""
+
+#: functions/seguente-functions.php:202
+msgid "Footer Widget 4"
+msgstr ""
+
+#: functions/seguente-functions.php:254
+msgid "&larr; Previous"
+msgstr ""
+
+#: functions/seguente-functions.php:255
+msgid "Next &rarr;"
+msgstr ""
+
+#: functions/seguente-functions.php:312
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: getintouch-section.php:38
+msgid "Get In Touch with Us"
+msgstr ""
+
+#: getintouch-section.php:39
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ipsum "
+"mauris. Fusce condimentum mollis eros vitae facilisis. Praesent gravida "
+"dignissim felis, id sagittis mauris rutrum non. Nullam pretium id sem ut "
+"hendrerit."
+msgstr ""
+
+#: image.php:36 post-nav.php:8
+msgid "Next"
+msgstr ""
+
+#: image.php:37 post-nav.php:9
+msgid "Previous"
+msgstr ""
+
+#: owlpost-info.php:7 post-info.php:19
+msgid "by "
+msgstr ""
+
+#: post-formats.php:33 post-formats.php:55
+msgid "Continue Reading..."
+msgstr ""
+
+#: post-formats.php:35 post-formats.php:56
+msgid "Tagged:"
+msgstr ""
+
+#: post-info.php:14
+#, php-format
+msgid "View all posts in %s"
+msgstr ""
+
+#: post-info.php:21 post-meta.php:11
+msgid "No Comments"
+msgstr ""
+
+#: post-info.php:21 post-meta.php:11
+msgid "1 Comment"
+msgstr ""
+
+#: post-info.php:21 post-meta.php:11
+msgid "% Comments"
+msgstr ""
+
+#: post-meta.php:13
+msgid "More"
+msgstr ""
+
+#: services-section.php:63
+msgid "Easy to Use"
+msgstr ""
+
+#: services-section.php:64 services-section.php:78 services-section.php:92
+#: services-section.php:106 services-section.php:121 services-section.php:135
+msgid ""
+"Lorem ipsum dolor sit amet consectetur labore et dolore magna aliqua elit sed "
+"do eiusmod minim"
+msgstr ""
+
+#: services-section.php:77
+msgid "Creative Elements"
+msgstr ""
+
+#: services-section.php:105
+msgid "Powerful Customizer"
+msgstr ""
+
+#: services-section.php:120
+msgid "Security Standards"
+msgstr ""
+
+#: services-section.php:134
+msgid "Stellar Support"
+msgstr ""
+
+#: sidebar.php:13
+msgid "Archives"
+msgstr ""
+
+#: sidebar.php:24
+msgid "Meta"
+msgstr ""
+
+#: social-section.php:22 top-header.php:18
+msgid "Google+"
+msgstr ""
+
+#: title-section.php:39
+msgid "Blog Posts "
+msgstr ""

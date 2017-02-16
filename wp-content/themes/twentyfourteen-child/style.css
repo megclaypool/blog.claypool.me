@@ -1,0 +1,18 @@
+/*
+Theme Name: Child Theme Practice
+Theme URI: http://blog.claypool.me
+Description: Practicing WordPress child themes
+Author: me :)
+Author URI: http://margaret.claypool.me
+Template: twentyfourteen
+Version: 0.1
+*/
+@import url("../twentyfourteen/style.css");
+
+.entry-title {
+  font-size: 40px;
+}
+
+.site {
+  background-color: light-grey;
+}

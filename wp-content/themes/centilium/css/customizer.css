@@ -1,0 +1,36 @@
+/*Support us*/
+.support-box{
+	text-align: center;
+}
+.support-us{
+	margin-top: 20px;
+}
+.rate {
+  background-color: #28750A;
+  border-color: #1ec846;
+  color: #fff !important;
+  cursor: pointer;
+  display: inline-block;
+   margin-bottom: 0;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 13px 30px 14px 29px;
+  text-transform: uppercase;
+  width: 54%;
+  border-radius:2px;
+}
+
+.donate-btn {
+  background-color: #ED9027;
+  border-color: #ED9027;
+  color: #fff !important;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 13px 30px 14px 29px;
+  text-transform: uppercase;
+  width: 54%;
+  border-radius:2px;
+}

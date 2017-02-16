@@ -1,0 +1,138 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Subscribe by MyThemeShop\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-26 04:49+0530\n"
+"PO-Revision-Date: 2015-09-26 04:49+0530\n"
+"Last-Translator: MyThemeShop <support-team@mythemeshop.com>\n"
+"Language-Team: MyThemeShop <support-team@mythemeshop.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.6.2\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../wp-subscribe.php:41
+msgid "Displays Subscription Form, Supports - FeedBurner, MailChimp & AWeber."
+msgstr ""
+
+#: ../wp-subscribe.php:47
+msgid "WP Subscribe Widget"
+msgstr ""
+
+#: ../wp-subscribe.php:176
+msgid "Service:"
+msgstr ""
+
+#: ../wp-subscribe.php:182
+msgid "Feedburner ID"
+msgstr ""
+
+#: ../wp-subscribe.php:186
+msgid "Mailchimp API key"
+msgstr ""
+
+#: ../wp-subscribe.php:187
+msgid "Find your API key"
+msgstr ""
+
+#: ../wp-subscribe.php:188
+msgid "Mailchimp List ID"
+msgstr ""
+
+#: ../wp-subscribe.php:189 ../wp-subscribe.php:199
+msgid "Find your list ID"
+msgstr ""
+
+#: ../wp-subscribe.php:193
+msgid "Send double opt-in notification"
+msgstr ""
+
+#: ../wp-subscribe.php:198
+msgid "AWeber List ID"
+msgstr ""
+
+#: ../wp-subscribe.php:203
+msgid "Labels"
+msgstr ""
+
+#: ../wp-subscribe.php:206
+msgid "Title"
+msgstr ""
+
+#: ../wp-subscribe.php:207
+msgid "Text"
+msgstr ""
+
+#: ../wp-subscribe.php:208
+msgid "Email Placeholder"
+msgstr ""
+
+#: ../wp-subscribe.php:209
+msgid "Button Text"
+msgstr ""
+
+#: ../wp-subscribe.php:210
+msgid "Success Message"
+msgstr ""
+
+#: ../wp-subscribe.php:211
+msgid "Error Message"
+msgstr ""
+
+#: ../wp-subscribe.php:212
+msgid "Error: Already Subscribed"
+msgstr ""
+
+#: ../wp-subscribe.php:213
+msgid "Footer Text"
+msgstr ""
+
+#: ../wp-subscribe.php:289
+msgid "Get more stuff like this<br/> <span>in your inbox</span>"
+msgstr ""
+
+#: ../wp-subscribe.php:290
+msgid ""
+"Subscribe to our mailing list and get interesting stuff and updates to your "
+"email inbox."
+msgstr ""
+
+#: ../wp-subscribe.php:291
+msgid "Enter your email here"
+msgstr ""
+
+#: ../wp-subscribe.php:292
+msgid "Sign Up Now"
+msgstr ""
+
+#: ../wp-subscribe.php:293
+msgid "Thank you for subscribing."
+msgstr ""
+
+#: ../wp-subscribe.php:294
+msgid "Something went wrong."
+msgstr ""
+
+#: ../wp-subscribe.php:295
+msgid "This email is already subscribed"
+msgstr ""
+
+#: ../wp-subscribe.php:296
+msgid "we respect your privacy and take protecting it seriously"
+msgstr ""
+
+#: ../wp-subscribe.php:377
+#, php-format
+msgid ""
+"<h4 style=\"font-size: 20px; color: #5FA52A; font-weight: normal; margin-"
+"bottom: 10px; margin-top: 5px;\">Get WP Suscbribe Pro Today!</"
+"h4><p><strong>Turn visitors into paying customers with pro version of WP "
+"Subscribe</strong>. WP Subscribe Pro + WordPress is the ultimate lead "
+"generation machine. Grow your email list like crazy and generate more "
+"residual traffic and earnings.</p><a class=\"notice-dismiss\" href=\"%1$s\" "
+"style=\"z-index: 1;\"></a>"
+msgstr ""

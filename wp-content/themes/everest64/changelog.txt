@@ -1,0 +1,18 @@
+= Version 1.1.4 =
+* Fixed the issues of language translation.
+* Fixes as per guidence from the reviewer.
+
+
+
+= Version 1.1.2 =
+* Reduced the amount of content creation.
+* Used the dropdown-pages type for the Services Category Section.
+* Removed the dummy/demo content in most of the sections.
+* Fixed the default image for the blog section.
+* Fixed header image option in the customizer and it will work in all pages and posts except homepage and contact page template.
+* Other issues fixed as per guidence from the reviewer.
+
+
+
+= Version 1.1.1 =
+* Initial Release
