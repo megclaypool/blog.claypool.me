@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2017 ServMask Inc.
+ * Copyright (C) 2014-2018 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,17 +24,23 @@
  */
 
 class Ai1wm_File_Htaccess {
-
 	/**
 	 * Create .htaccess file
 	 *
 	 * The method will create .htaccess file with contents 'AddType application/octet-stream .wpress'
 	 *
-	 * @param  string  $path Path to the .htaccess file
-	 * @return boolean|null
+	 * @param string $path Path to the backups directory
+	 * @return boolean
 	 */
 	public static function create( $path ) {
-		$contents = "<IfModule mod_mime.c>\nAddType application/octet-stream .wpress\n</IfModule>";
+		$contents = "<IfModule mod_mime.c>\n" .
+					"AddType application/octet-stream .wpress\n" .
+					"</IfModule>\n" .
+					"<IfModule mod_dir.c>\n" .
+					"DirectoryIndex index.php\n" .
+					"</IfModule>\n" .
+					"Options -Indexes\n";
+
 		return Ai1wm_File::create( $path, $contents );
 	}
 }

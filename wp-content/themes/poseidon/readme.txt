@@ -3,8 +3,8 @@ Author URI: https://themezee.com
 Theme URI: https://themezee.com/themes/poseidon/
 Contributors: themezee
 Tags: two-columns, custom-background, custom-header, custom-menu, blog, news,  editor-style, rtl-language-support, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
-Requires at least: 4.4
-Tested up to: 4.7
+Requires at least: 4.7
+Tested up to: 4.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,62 @@ For more information about Poseidon please go to https://themezee.com/themes/pos
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Changelog ==
+
+= 1.4.3 =
+* fixed styling of blog layout for posts loaded with Infinite Scrolling
+
+= 1.4.2 =
+* improved styling of image captions
+* improved styling of aligned images
+
+= 1.4.1 =
+* added action hook for author bio
+* added filter to allow plugins to add own elements to be hidden
+* updated styling for improved color settings
+
+= 1.4 =
+* added new section for Blog Settings in Customizer
+* added option to hide featured images on blog and archives
+* added setting to disable Magazine widgets on blog index
+* added Blog Description beside Blog Title
+* added selective refresh for blog and post settings
+* added new template function to display blog title
+* changed required WordPress version to 4.7
+* fixed sidebar position on RTL websites
+
+= 1.3 =
+* added improved Magazine Widget Customizer Control
+* added default widget titles for Magazine widgets
+
+= 1.2.5 =
+* fixed alignment of site logo in MS Edge
+* ignore sticky posts in Magazine widgets
+* fixed header images being stretched on single posts
+
+= 1.2.4 =
+* fixed alignment of site logo and site title when used together
+* fixed small live preview issue in Customizer for site title and tagline options
+* use localized theme name and description on theme info page
+
+= 1.2.3 =
+* added transient caching to post slider
+* added post hyperlinks to slider images in post slider
+* added own template function to display slider image for better child theme support
+* fixed slider images getting stretched when too small images are uploaded
+* improved Right-to-Left language stylesheets
+
+= 1.2.2 =
+* fixed number of posts setting in Magazine widgets
+
+= 1.2.1 =
+* fixed layout rendering issue in Magazine Grid widget
+
+= 1.2 =
+* added template files for Magazine widgets to improve child theme compatibility
+* added transient caching for Magazine widgets to increase performance
+* added pluggable template functions for Magazine widgets
+* improved implementation of post meta settings for instant live preview in Customizer
+* replaced Magazine Boxed widget with Horizontal Box and Vertical Box widget
 
 = 1.1.8 =
 * fixed spacing issue of new sticky header feature

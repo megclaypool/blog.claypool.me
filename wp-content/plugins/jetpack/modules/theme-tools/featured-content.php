@@ -172,9 +172,10 @@ class Featured_Content {
 		}
 
 		$featured_posts = get_posts( array(
-			'include'        => $post_ids,
-			'posts_per_page' => count( $post_ids ),
-			'post_type'      => self::$post_types,
+			'include'          => $post_ids,
+			'posts_per_page'   => count( $post_ids ),
+			'post_type'        => self::$post_types,
+			'suppress_filters' => false,
 		) );
 
 		return $featured_posts;
@@ -230,6 +231,7 @@ class Featured_Content {
 		$featured = get_posts( array(
 			'numberposts' => $quantity,
 			'post_type'   => self::$post_types,
+			'suppress_filters' => false,
 			'tax_query'   => array(
 				array(
 					'field'    => 'term_id',
@@ -267,7 +269,7 @@ class Featured_Content {
 
 	/**
 	 * Exclude featured posts from the blog query when the blog is the front-page,
-	 * and user has not checked the "Display tag content in all listings" checkbox.
+	 * and user has not checked the "Also display tagged posts outside the Featured Content area" checkbox.
 	 *
 	 * Filter the home page posts, and remove any featured post ID's from it.
 	 * Hooked onto the 'pre_get_posts' action, this changes the parameters of the
@@ -459,7 +461,7 @@ class Featured_Content {
 	 */
 	public static function customize_register( $wp_customize ) {
 		$wp_customize->add_section( 'featured_content', array(
-			'title'          => __( 'Featured Content', 'jetpack' ),
+			'title'          => esc_html__( 'Featured Content', 'jetpack' ),
 			'description'    => sprintf( __( 'Easily feature all posts with the <a href="%1$s">"featured" tag</a> or a tag of your choice. Your theme supports up to %2$s posts in its featured content area.', 'jetpack' ), admin_url( '/edit.php?tag=featured' ), absint( self::$max_posts ) ),
 			'priority'       => 130,
 			'theme_supports' => 'featured-content',
@@ -487,20 +489,20 @@ class Featured_Content {
 
 		// Add Featured Content controls.
 		$wp_customize->add_control( 'featured-content[tag-name]', array(
-			'label'          => __( 'Tag name', 'jetpack' ),
+			'label'          => esc_html__( 'Tag name', 'jetpack' ),
 			'section'        => 'featured_content',
 			'theme_supports' => 'featured-content',
 			'priority'       => 20,
 		) );
 		$wp_customize->add_control( 'featured-content[hide-tag]', array(
-			'label'          => __( 'Hide tag from displaying in post meta and tag clouds.', 'jetpack' ),
+			'label'          => esc_html__( 'Do not display tag in post details and tag clouds.', 'jetpack' ),
 			'section'        => 'featured_content',
 			'theme_supports' => 'featured-content',
 			'type'           => 'checkbox',
 			'priority'       => 30,
 		) );
 		$wp_customize->add_control( 'featured-content[show-all]', array(
-			'label'          => __( 'Display tag content in all listings.', 'jetpack' ),
+			'label'          => esc_html__( 'Also display tagged posts outside the Featured Content area.', 'jetpack' ),
 			'section'        => 'featured_content',
 			'theme_supports' => 'featured-content',
 			'type'           => 'checkbox',
@@ -640,5 +642,18 @@ class Featured_Content {
 }
 
 Featured_Content::setup();
+
+/**
+ * Adds the featured content plugin to the set of files for which action 
+ * handlers should be copied when the theme context is loaded by the REST API.
+ *
+ * @param array $copy_dirs Copy paths with actions to be copied
+ * @return array Copy paths with featured content plugin
+ */
+function wpcom_rest_api_featured_content_copy_plugin_actions( $copy_dirs ) {
+	$copy_dirs[] = __FILE__;
+	return $copy_dirs;
+}
+add_action( 'restapi_theme_action_copy_dirs', 'wpcom_rest_api_featured_content_copy_plugin_actions' );
 
 } // end if ( ! class_exists( 'Featured_Content' ) && isset( $GLOBALS['pagenow'] ) && 'plugins.php' !== $GLOBALS['pagenow'] ) {

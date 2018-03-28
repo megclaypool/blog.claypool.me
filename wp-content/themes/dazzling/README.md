@@ -44,7 +44,7 @@ Theme documentation [is available here](https://colorlib.com/wp/support/dazzling
 * License URI: http://www.gnu.org/licenses/gpl.html
 * Dazzling theme, Copyright 2014-2016 https://colorlib.com
 * Dazzling WordPress theme is distributed under the terms of the GNU GPL
-* Dazzling is based on [Underscores](http://underscores.me/), (C) 2012-2016 Automattic, Inc.
+* Dazzling is based on [Underscores](http://underscores.me/), (C) 2012-2017 Automattic, Inc.
 
 #Credits#
 
@@ -56,6 +56,18 @@ Dazzling theme uses:
 * [FlexSlider](https://github.com/woothemes/FlexSlider) by WooThemes licensed under the GPLv2 license
 
 #Changelog#
+
+####2.1.1 - 17.05.2017####
+
+* Improved mobile layout
+* Added Ukranian translation
+
+####2.1.0 - 30.06.2016####
+
+* Added TGMPA & made Kiwi a recommended plugin
+* Updated theme tags as per new w.org regulations
+* Fixed numerous errors
+* Updated translation files thanks to Vaidas Elksnys
 
 ####2.0.4 - 19.03.2016####
 

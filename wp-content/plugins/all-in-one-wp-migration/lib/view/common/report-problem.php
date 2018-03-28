@@ -10,16 +10,21 @@
 			<textarea rows="3" id="ai1wm-report-message" class="ai1wm-report-message" placeholder="<?php _e( 'Please describe your problem here..', AI1WM_PLUGIN_NAME ); ?>"></textarea>
 		</div>
 		<div class="ai1wm-field ai1wm-report-terms-segment">
-			<input type="checkbox" class="ai1wm-report-terms" id="ai1wm-report-terms" />
-			<label for="ai1wm-report-terms"><?php _e( 'I agree to send my email address, comments and error logs to a ServMask server.', AI1WM_PLUGIN_NAME ); ?></label>
+			<label for="ai1wm-report-terms">
+				<input type="checkbox" class="ai1wm-report-terms" id="ai1wm-report-terms" />
+				<?php _e( 'I agree to send my email address, comments and error logs to a ServMask server.', AI1WM_PLUGIN_NAME ); ?>
+			</label>
 		</div>
 		<div class="ai1wm-field">
 			<div class="ai1wm-buttons">
-				<button type="submit" id="ai1wm-report-submit" class="ai1wm-button-blue">
+				<a href="#" id="ai1wm-report-cancel" class="ai1wm-report-cancel"><?php _e( 'Cancel', AI1WM_PLUGIN_NAME ); ?></a>
+
+				<button type="submit" id="ai1wm-report-submit" class="ai1wm-button-blue ai1wm-form-submit">
 					<i class="ai1wm-icon-paperplane"></i>
 					<?php _e( 'Send', AI1WM_PLUGIN_NAME ); ?>
 				</button>
-				<a href="#" id="ai1wm-report-cancel" class="ai1wm-report-cancel"><?php _e( 'Cancel', AI1WM_PLUGIN_NAME ); ?></a>
+				<span class="spinner"></span>
+				<div class="ai1wm-clear"></div>
 			</div>
 		</div>
 	</div>

@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2017 ServMask Inc.
+ * Copyright (C) 2014-2018 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -76,7 +76,7 @@ class Ai1wm_Extensions {
 				'about'    => AI1WMME_PLUGIN_ABOUT,
 				'basename' => AI1WMME_PLUGIN_BASENAME,
 				'version'  => AI1WMME_VERSION,
-				'requires' => '3.26',
+				'requires' => '3.49',
 				'short'    => AI1WMME_PLUGIN_SHORT,
 			);
 		}
@@ -138,6 +138,18 @@ class Ai1wm_Extensions {
 				'version'  => AI1WMBE_VERSION,
 				'requires' => '1.0',
 				'short'    => AI1WMBE_PLUGIN_SHORT,
+			);
+		}
+
+		// Add Mega Extension
+		if ( defined( 'AI1WMEE_PLUGIN_NAME' ) ) {
+			$extensions[ AI1WMEE_PLUGIN_NAME ] = array(
+				'key'      => AI1WMEE_PLUGIN_KEY,
+				'about'    => AI1WMEE_PLUGIN_ABOUT,
+				'basename' => AI1WMEE_PLUGIN_BASENAME,
+				'version'  => AI1WMEE_VERSION,
+				'requires' => '1.0',
+				'short'    => AI1WMEE_PLUGIN_SHORT,
 			);
 		}
 

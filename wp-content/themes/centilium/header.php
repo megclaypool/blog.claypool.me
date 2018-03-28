@@ -56,6 +56,7 @@
 							<div class="clearfix"></div>
 					</ul>
 				</div>
+				<?php if ( !wp_is_mobile() ){?>
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<div class="head-nav">
 						<span class="menu"> </span><!--Mobile MENU-->
@@ -65,7 +66,25 @@
 							) ); ?>
 					</div>
 				</nav><!-- #site-navigation -->	
+				<?php } ?>
 			</div>
+			<?php if ( wp_is_mobile() ){?>
+			<nav id="mobile-navigation" class="menu-navigation " role="navigation">
+				<span class="header-menu-button"><i class="fa fa-bars"></i></span>
+				<div id="main-menu" class="container centilium-mobile-menu-standard-color-scheme">
+					<div class="main-menu-close"><i class="fa fa-angle-right"></i><i class="fa fa-angle-left"></i></div>
+					<?php wp_nav_menu( array( 
+							'theme_location' => 'primary', 
+							'container_class' => 'menu-navigation-inner' 
+							) 
+						); 
+					?>
+					<div class="search-bar">
+						<?php get_search_form(); ?>
+					</div>
+				</div>
+			</nav><!--#mobile-navigation -->
+			<?php } ?>
 				<div class="clearfix"> </div>
 		</div>
 		

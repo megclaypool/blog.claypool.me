@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2017 ServMask Inc.
+ * Copyright (C) 2014-2018 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -31,7 +31,7 @@ define( 'AI1WM_DEBUG', false );
 // ==================
 // = Plugin Version =
 // ==================
-define( 'AI1WM_VERSION', '6.40' );
+define( 'AI1WM_VERSION', '6.65' );
 
 // ===============
 // = Plugin Name =
@@ -208,10 +208,25 @@ define( 'AI1WM_ACTIVE_PLUGINS', 'active_plugins' );
 // ===========================
 define( 'AI1WM_ACTIVE_SITEWIDE_PLUGINS', 'active_sitewide_plugins' );
 
+// ==========================
+// = Jetpack Active Modules =
+// ==========================
+define( 'AI1WM_JETPACK_ACTIVE_MODULES', 'jetpack_active_modules' );
+
 // ======================
 // = MS Files Rewriting =
 // ======================
 define( 'AI1WM_MS_FILES_REWRITING', 'ms_files_rewriting' );
+
+// ===================
+// = Active Template =
+// ===================
+define( 'AI1WM_ACTIVE_TEMPLATE', 'template' );
+
+// =====================
+// = Active Stylesheet =
+// =====================
+define( 'AI1WM_ACTIVE_STYLESHEET', 'stylesheet' );
 
 // ===============
 // = Updater Key =
@@ -567,4 +582,34 @@ if ( ! defined( 'AI1WMBE_PLUGIN_KEY' ) ) {
 // =======================
 if ( ! defined( 'AI1WMBE_PLUGIN_SHORT' ) ) {
 	define( 'AI1WMBE_PLUGIN_SHORT', 'box' );
+}
+
+// ===========================
+// = Mega Extension Base Dir =
+// ===========================
+if ( defined( 'AI1WMEE_PLUGIN_BASENAME' ) ) {
+	define( 'AI1WMEE_PLUGIN_BASEDIR', dirname( AI1WMEE_PLUGIN_BASENAME ) );
+} else {
+	define( 'AI1WMEE_PLUGIN_BASEDIR', 'all-in-one-wp-migration-mega-extension' );
+}
+
+// ========================
+// = Mega Extension About =
+// ========================
+if ( ! defined( 'AI1WMEE_PLUGIN_ABOUT' ) ) {
+	define( 'AI1WMEE_PLUGIN_ABOUT', 'https://servmask.com/products/mega-extension/about' );
+}
+
+// ======================
+// = Mega Extension Key =
+// ======================
+if ( ! defined( 'AI1WMEE_PLUGIN_KEY' ) ) {
+	define( 'AI1WMEE_PLUGIN_KEY', 'ai1wmee_plugin_key' );
+}
+
+// ========================
+// = Mega Extension Short =
+// ========================
+if ( ! defined( 'AI1WMEE_PLUGIN_SHORT' ) ) {
+	define( 'AI1WMEE_PLUGIN_SHORT', 'mega' );
 }

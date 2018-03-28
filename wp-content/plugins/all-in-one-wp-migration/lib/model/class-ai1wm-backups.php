@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2017 ServMask Inc.
+ * Copyright (C) 2014-2018 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -33,24 +33,39 @@ class Ai1wm_Backups {
 	public function get_files() {
 		$backups = array();
 
+		// Iterate over directory
+		$iterator = new Ai1wm_Recursive_Directory_Iterator( AI1WM_BACKUPS_PATH );
+
+		// Recursively iterate over directory
+		$iterator = new RecursiveIteratorIterator( $iterator, RecursiveIteratorIterator::CHILD_FIRST, RecursiveIteratorIterator::CATCH_GET_CHILD );
+		$iterator->setMaxDepth( 3 );
+
 		// Get backup files
-		$iterator = new Ai1wm_Extension_Filter(
-			new DirectoryIterator( AI1WM_BACKUPS_PATH ),
-			array( 'wpress', 'bin' )
-		);
+		$iterator = new Ai1wm_Extension_Filter( $iterator, array( 'wpress', 'bin' ) );
 
 		foreach ( $iterator as $item ) {
 			try {
-				$backups[] = array(
-					'filename' => $item->getFilename(),
-					'mtime'    => $item->getMTime(),
-					'size'     => $item->getSize(),
-				);
+				if ( ai1wm_is_filesize_supported( $item->getPathname() ) ) {
+					$backups[] = array(
+						'path'     => $iterator->getSubPath(),
+						'filename' => $iterator->getSubPathname(),
+						'mtime'    => $iterator->getMTime(),
+						'size'     => $iterator->getSize(),
+					);
+				} else {
+					$backups[] = array(
+						'path'     => $iterator->getSubPath(),
+						'filename' => $iterator->getSubPathname(),
+						'mtime'    => $iterator->getMTime(),
+						'size'     => null,
+					);
+				}
 			} catch ( Exception $e ) {
 				$backups[] = array(
-					'filename' => $item->getFilename(),
+					'path'     => $iterator->getSubPath(),
+					'filename' => $iterator->getSubPathname(),
 					'mtime'    => null,
-					'size'     => ai1wm_filesize( $item->getPathname() ),
+					'size'     => null,
 				);
 			}
 		}
@@ -68,18 +83,9 @@ class Ai1wm_Backups {
 	 * @return boolean
 	 */
 	public function delete_file( $file ) {
-		if ( empty( $file ) ) {
-			throw new Ai1wm_Backups_Exception( __( 'File name is not specified.', AI1WM_PLUGIN_NAME ) );
-		} else if ( ! unlink( AI1WM_BACKUPS_PATH . DIRECTORY_SEPARATOR . $file ) ) {
-			throw new Ai1wm_Backups_Exception(
-				sprintf(
-					__( 'Unable to delete <strong>"%s"</strong> file.', AI1WM_PLUGIN_NAME ),
-					AI1WM_BACKUPS_PATH . DIRECTORY_SEPARATOR . $file
-				)
-			);
+		if ( validate_file( $file ) === 0 ) {
+			return @unlink( ai1wm_backup_path( array( 'archive' => $file ) ) );
 		}
-
-		return true;
 	}
 
 	/**

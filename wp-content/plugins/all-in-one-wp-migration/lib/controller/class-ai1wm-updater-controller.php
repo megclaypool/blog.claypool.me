@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2017 ServMask Inc.
+ * Copyright (C) 2014-2018 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -52,19 +52,24 @@ class Ai1wm_Updater_Controller {
 		return Ai1wm_Updater::plugin_row_meta( $links, $file );
 	}
 
-	public static function updater() {
+	public static function updater( $params = array() ) {
 		$extensions = Ai1wm_Extensions::get();
+
+		// Set params
+		if ( empty( $params ) ) {
+			$params = stripslashes_deep( $_POST );
+		}
 
 		// Set uuid
 		$uuid = null;
-		if ( isset( $_POST['ai1wm_uuid'] ) ) {
-			$uuid = trim( $_POST['ai1wm_uuid'] );
+		if ( isset( $params['ai1wm_uuid'] ) ) {
+			$uuid = trim( $params['ai1wm_uuid'] );
 		}
 
 		// Set extension
 		$extension = null;
-		if ( isset( $_POST['ai1wm_extension'] ) ) {
-			$extension = trim( $_POST['ai1wm_extension'] );
+		if ( isset( $params['ai1wm_extension'] ) ) {
+			$extension = trim( $params['ai1wm_extension'] );
 		}
 
 		// Verify whether extension exists

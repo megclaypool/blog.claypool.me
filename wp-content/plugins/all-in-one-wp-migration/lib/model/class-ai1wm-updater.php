@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2017 ServMask Inc.
+ * Copyright (C) 2014-2018 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -38,6 +38,7 @@ class Ai1wm_Updater {
 			return $result;
 		}
 
+		// Get extensions
 		$extensions = Ai1wm_Extensions::get();
 
 		// View details page
@@ -62,6 +63,9 @@ class Ai1wm_Updater {
 	 * @return object
 	 */
 	public static function update_plugins( $transient ) {
+		global $wp_version;
+
+		// Get extensions
 		$extensions = Ai1wm_Extensions::get();
 
 		// Get current updates
@@ -86,6 +90,8 @@ class Ai1wm_Updater {
 							'url'         => $update['homepage'],
 							'plugin'      => $extension['basename'],
 							'package'     => sprintf( '%s/%s?siteurl=%s', $update['download_link'], $key, $url ),
+							'tested'      => $wp_version,
+							'icons'       => $update['icons'],
 						);
 					}
 				}

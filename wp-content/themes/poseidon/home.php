@@ -18,29 +18,14 @@ $theme_options = poseidon_theme_options();
 
 		<?php
 		// Display Magazine Homepage Widgets.
-		if ( ! is_paged() && is_active_sidebar( 'magazine-homepage' ) ) : ?>
+		poseidon_magazine_widgets();
 
-			<div id="magazine-homepage-widgets" class="widget-area clearfix">
-
-				<?php dynamic_sidebar( 'magazine-homepage' ); ?>
-
-			</div><!-- #magazine-homepage-widgets -->
-
-			<?php
-		endif;
-
+		// Display Latest Posts.
 		if ( have_posts() ) :
 
-			// Display Latest Posts Title.
-			if ( '' !== $theme_options['latest_posts_title'] ) : ?>
-
-				<header class="page-header">
-
-					<h2 class="archive-title"><?php echo wp_kses_post( $theme_options['latest_posts_title'] ); ?></h2>
-
-				</header><!-- .page-header -->
-
-			<?php endif; ?>
+			// Display Blog Title.
+			poseidon_blog_title();
+			?>
 
 			<div id="post-wrapper" class="post-wrapper clearfix">
 

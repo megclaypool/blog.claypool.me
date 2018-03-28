@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2017 ServMask Inc.
+ * Copyright (C) 2014-2018 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -46,6 +46,18 @@ class Ai1wm_Recursive_Directory_Iterator extends RecursiveDirectoryIterator {
 
 		// Skip current and parent directory
 		$this->skipdots();
+	}
+
+	/**
+	 * Returns whether current entry is a directory and not '.' or '..'
+	 *
+	 * Explicitly set allow links flag, because RecursiveDirectoryIterator::FOLLOW_SYMLINKS
+	 * is not supported by <= PHP 5.3.0
+	 *
+	 * @return bool
+	 */
+	public function hasChildren( $allow_links = true ) {
+		return parent::hasChildren( $allow_links );
 	}
 
 	protected function skipdots() {

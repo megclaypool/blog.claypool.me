@@ -3,9 +3,9 @@
 		<p>
 			<span>
 				<strong><?php _e( 'Find', AI1WM_PLUGIN_NAME ); ?></strong>
-				<small class="ai1wm-query-find-text ai1wm-tooltip" title="Search the database for this text"><?php echo esc_attr( __( '<text>', AI1WM_PLUGIN_NAME ) ); ?></small>
+				<small class="ai1wm-query-find-text ai1wm-tooltip" title="Search the database for this text"><?php echo esc_html( __( '<text>', AI1WM_PLUGIN_NAME ) ); ?></small>
 				<strong><?php _e( 'Replace with', AI1WM_PLUGIN_NAME ); ?></strong>
-				<small class="ai1wm-query-replace-text ai1wm-tooltip" title="Replace the database with this text"><?php echo esc_attr( __( '<another-text>', AI1WM_PLUGIN_NAME ) ); ?></small>
+				<small class="ai1wm-query-replace-text ai1wm-tooltip" title="Replace the database with this text"><?php echo esc_html( __( '<another-text>', AI1WM_PLUGIN_NAME ) ); ?></small>
 				<strong><?php _e( 'in the database', AI1WM_PLUGIN_NAME ); ?></strong>
 			</span>
 			<span class="ai1wm-query-arrow ai1wm-icon-chevron-right"></span>

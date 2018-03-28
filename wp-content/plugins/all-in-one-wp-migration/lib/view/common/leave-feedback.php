@@ -31,16 +31,21 @@
 			<textarea rows="3" id="ai1wm-feedback-message" class="ai1wm-feedback-message" placeholder="<?php _e( 'Leave plugin developers any feedback here..', AI1WM_PLUGIN_NAME ); ?>"></textarea>
 		</div>
 		<div class="ai1wm-field ai1wm-feedback-terms-segment">
-			<input type="checkbox" class="ai1wm-feedback-terms" id="ai1wm-feedback-terms" />
-			<label for="ai1wm-feedback-terms"><?php _e( 'I agree that by clicking the send button below my email address and comments will be send to a ServMask server.', AI1WM_PLUGIN_NAME ); ?></label>
+			<label for="ai1wm-feedback-terms">
+				<input type="checkbox" class="ai1wm-feedback-terms" id="ai1wm-feedback-terms" />
+				<?php _e( 'I agree that by clicking the send button below my email address and comments will be send to a ServMask server.', AI1WM_PLUGIN_NAME ); ?>
+			</label>
 		</div>
 		<div class="ai1wm-field">
 			<div class="ai1wm-buttons">
-				<button type="submit" id="ai1wm-feedback-submit" class="ai1wm-button-blue">
+				<a class="ai1wm-feedback-cancel" id="ai1wm-feedback-cancel" href="#"><?php _e( 'Cancel', AI1WM_PLUGIN_NAME ); ?></a>
+
+				<button type="submit" id="ai1wm-feedback-submit" class="ai1wm-button-blue ai1wm-form-submit">
 					<i class="ai1wm-icon-paperplane"></i>
 					<?php _e( 'Send', AI1WM_PLUGIN_NAME ); ?>
 				</button>
-				<a class="ai1wm-feedback-cancel" id="ai1wm-feedback-cancel" href="#"><?php _e( 'Cancel', AI1WM_PLUGIN_NAME ); ?></a>
+				<span class="spinner"></span>
+				<div class="ai1wm-clear"></div>
 			</div>
 		</div>
 	</div>

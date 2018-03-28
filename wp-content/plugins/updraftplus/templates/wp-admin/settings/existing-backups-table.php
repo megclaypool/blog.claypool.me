@@ -4,6 +4,8 @@ if (!defined('UPDRAFTPLUS_DIR')) die('No direct access allowed');
 
 $accept = apply_filters('updraftplus_accept_archivename', array());
 if (!is_array($accept)) $accept = array();
+$image_folder = UPDRAFTPLUS_DIR.'/images/icons/';
+$image_folder_url = UPDRAFTPLUS_URL.'/images/icons/';
 
 ?>
 <table class="existing-backups-table">
@@ -31,19 +33,19 @@ if (!is_array($accept)) $accept = array();
 			// $pretty_date = date_i18n('Y-m-d G:i',$key);
 			// Convert to blog time zone
 			// $pretty_date = get_date_from_gmt(gmdate('Y-m-d H:i:s', (int)$key), 'Y-m-d G:i');
-			$pretty_date = get_date_from_gmt(gmdate('Y-m-d H:i:s', (int)$key), 'M d, Y G:i');
+			$pretty_date = get_date_from_gmt(gmdate('Y-m-d H:i:s', (int) $key), 'M d, Y G:i');
 
 			$esc_pretty_date = esc_attr($pretty_date);
 			$entities = '';
 
-			$non = $backup['nonce'];
-			$rawbackup = $updraftplus_admin->raw_backup_info($backup_history, $key, $non);
+			$nonce = $backup['nonce'];
+			$rawbackup = $updraftplus_admin->raw_backup_info($backup_history, $key, $nonce);
 
-			$jobdata = $updraftplus->jobdata_getarray($non);
+			$jobdata = $updraftplus->jobdata_getarray($nonce);
 
-			$delete_button = $updraftplus_admin->delete_button($key, $non, $backup);
+			$delete_button = $updraftplus_admin->delete_button($key, $nonce, $backup);
 
-			$date_label = $updraftplus_admin->date_label($pretty_date, $key, $backup, $jobdata, $non);
+			$date_label = $updraftplus_admin->date_label($pretty_date, $key, $backup, $jobdata, $nonce);
 
 			$log_button = $updraftplus_admin->log_button($backup);
 
@@ -51,10 +53,28 @@ if (!is_array($accept)) $accept = array();
 			// if ($remote_sent && !$log_button) continue;
 
 			?>
-			<tr class="updraft_existing_backups_row updraft_existing_backups_row_<?php echo $key;?>" data-key="<?php echo $key;?>" data-nonce="<?php echo $non;?>">
+			<tr class="updraft_existing_backups_row updraft_existing_backups_row_<?php echo $key;?>" data-key="<?php echo $key;?>" data-nonce="<?php echo $nonce;?>">
 
 				<td class="updraft_existingbackup_date " data-rawbackup="<?php echo $rawbackup;?>">
-					<?php echo $date_label;?>
+					<div class="backup_date_label">
+						<?php echo $date_label;?>
+						<?php
+							if (!isset($backup['service'])) $backup['service'] = array();
+							if (!is_array($backup['service'])) $backup['service'] = array($backup['service']);
+							foreach ($backup['service'] as $service) {
+								if ('none' === $service || '' === $service || (is_array($service) && (empty($service) || array('none') === $service || array('') === $service))) {
+									// Do nothing
+								} else {
+									$image_url = file_exists($image_folder.$service.'.png') ? $image_folder_url.$service.'.png' : $image_folder_url.'folder.png';
+
+									$remote_storage = ('remotesend' === $service) ? __('remote site', 'updraftplus') : $updraftplus->backup_methods[$service];
+									?>
+									<img class="stored_icon" src="<?php echo esc_attr($image_url);?>" title="<?php echo esc_attr(sprintf(__('Stored at: %s', 'updraftplus'), $remote_storage));?>">
+									<?php
+								}
+							}
+						?>
+					</div>
 				</td>
 				
 				<td><?php
@@ -106,7 +126,6 @@ if (!is_array($accept)) $accept = array();
 					if (empty($backup['meta_foreign'])) echo $log_button;
 					?>
 				</td>
-
 			</tr>
 
 			<tr style="height:2px; padding:1px; margin:0px;">

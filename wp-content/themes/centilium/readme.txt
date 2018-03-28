@@ -2,7 +2,7 @@
 Tags: black, blue, dark, two-columns, post-formats, threaded-comments, right-sidebar, fixed-layout, custom-background, featured-images, sticky-post, custom-menu, translation-ready
 Requires at least: 4.2
 Tested up to: 4.5.1
-Stable tag: 1.8.6
+Stable tag: 1.8.7
 
 
 demo: http://wpthemes.icynets.com/centilium/
@@ -36,6 +36,10 @@ To add custom logo to the theme, go to header.php in the theme files, under the 
 Centilium includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
+= 1.8.7 - August 14 2016=
+*fixed Mobile Menu problem. Replaced older menu with new Menu slide from right
+*minor fix
+
 = 1.8.6 - April 30 2016=
 *ability to hide the header search field
 *minor fix

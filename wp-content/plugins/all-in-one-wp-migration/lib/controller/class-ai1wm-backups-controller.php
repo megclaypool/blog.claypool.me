@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2017 ServMask Inc.
+ * Copyright (C) 2014-2018 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -31,20 +31,38 @@ class Ai1wm_Backups_Controller {
 		Ai1wm_Template::render(
 			'backups/index',
 			array(
-				'backups'     => $model->get_files(),
-				'username'    => get_option( AI1WM_AUTH_USER ),
-				'password'    => get_option( AI1WM_AUTH_PASSWORD ),
+				'backups'  => $model->get_files(),
+				'username' => get_option( AI1WM_AUTH_USER ),
+				'password' => get_option( AI1WM_AUTH_PASSWORD ),
 			)
 		);
 	}
 
-	public static function delete() {
-		$response = array( 'errors' => array() );
+	public static function delete( $params = array() ) {
+		$errors = array();
+
+		// Set params
+		if ( empty( $params ) ) {
+			$params = stripslashes_deep( $_POST );
+		}
+
+		// Set secret key
+		$secret_key = null;
+		if ( isset( $params['secret_key'] ) ) {
+			$secret_key = trim( $params['secret_key'] );
+		}
 
 		// Set archive
 		$archive = null;
-		if ( isset( $_POST['archive'] ) ) {
-			$archive = trim( $_POST['archive'] );
+		if ( isset( $params['archive'] ) ) {
+			$archive = trim( $params['archive'] );
+		}
+
+		try {
+			// Ensure that unauthorized people cannot access delete action
+			ai1wm_verify_secret_key( $secret_key );
+		} catch ( Ai1wm_Not_Valid_Secret_Key_Exception $e ) {
+			exit;
 		}
 
 		$model = new Ai1wm_Backups;
@@ -53,10 +71,10 @@ class Ai1wm_Backups_Controller {
 			// Delete file
 			$model->delete_file( $archive );
 		} catch ( Exception $e ) {
-			$response['errors'][] = $e->getMessage();
+			$errors[] = $e->getMessage();
 		}
 
-		echo json_encode( $response );
+		echo json_encode( array( 'errors' => $errors ) );
 		exit;
 	}
 }

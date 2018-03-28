@@ -1,0 +1,354 @@
+0000.000 (0) Opened log file at time: Wed, 28 Mar 2018 22:48:47 +0000 on http://blog.test
+0000.014 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.12.40 WP: 4.7.4 PHP: 7.0.27 (apache2handler, Darwin Megs-MacBook.local 17.4.0 Darwin Kernel Version 17.4.0: Sun Dec 17 09:19:54 PST 2017; root:xnu-4570.41.2~1/RELEASE_X86_64 x86_64) MySQL: 5.5.5 WPLANG: en_US Server: Apache/2.4.29 (Unix) OpenSSL/1.0.2n PHP/7.0.27 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 6M | 8M) multisite: N openssl: OpenSSL 1.0.2n  7 Dec 2017 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.032 (0) Free space on disk containing Updraft's temporary directory: 55646.6 MB
+0000.086 (0) Tasks: Backup files: 1 (schedule: daily) Backup DB:  (schedule: daily)
+0000.089 (0) Processed schedules. Combining jobs from identical schedules. Tasks now: Backup files: 1 Backup DB: 1
+0000.101 (0) Requesting semaphore lock (fd) (apparently via scheduler: last_scheduled_action_called_at=1493499987, seconds_ago=28777340)
+0000.114 (0) Set semaphore last lock (fd) time to 2018-03-28 22:48:47
+0000.116 (0) Semaphore lock (fd) complete
+0000.134 (0) Backup run: resumption=0, nonce=7640be4e697d, begun at=1522277327 (1s ago), job type=backup
+0000.146 (0) Scheduling a resumption (1) after 300 seconds (1522277628) in case this run gets aborted
+0000.242 (0) Checking if we have a zip executable available
+0000.246 (0) Testing: /usr/bin/zip
+0000.297 (0) Output: zip warning: binziptest/test.zip not found or empty
+0000.300 (0) Output: adding: binziptest/subdir1/	(in=0) (out=0) (stored 0%)
+0000.304 (0) Output: adding: binziptest/subdir1/subdir2/	(in=0) (out=0) (stored 0%)
+0000.313 (0) Output: adding: binziptest/subdir1/subdir2/test.html	(in=131) (out=107) (deflated 18%)
+0000.319 (0) Output: total bytes=131, compressed=107 -> 18% savings
+0000.382 (0) Output: adding: binziptest/subdir1/subdir2/test2.html	(in=138) (out=113) (deflated 18%)
+0000.398 (0) Output: total bytes=269, compressed=220 -> 18% savings
+0000.513 (0) Working binary zip found: /usr/bin/zip
+0000.545 (0) Zip engine: found/will use a binary zip: /usr/bin/zip
+0000.562 (0) Creation of backups of directories: beginning
+0000.664 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0000.999 (0) Total entities for the zip file: 600 directories, 3819 files (0 skipped as non-modified), 47.3 MB
+0001.008 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 100 files added (on-disk size: 0 KB)
+0001.016 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 200 files added (on-disk size: 0 KB)
+0001.024 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 300 files added (on-disk size: 0 KB)
+0001.036 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 400 files added (on-disk size: 0 KB)
+0001.049 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 500 files added (on-disk size: 0 KB)
+0001.051 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (5.1 MB, 3819 files batched, 501 (501) added so far); re-opening (prior size: 0 KB)
+0001.959 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: size is now: 2.00 MB
+0001.971 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 600 files added (on-disk size: 2013.8 KB)
+0001.981 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 700 files added (on-disk size: 2013.8 KB)
+0001.992 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 800 files added (on-disk size: 2013.8 KB)
+0002.008 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 900 files added (on-disk size: 2013.8 KB)
+0002.050 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 1000 files added (on-disk size: 2013.8 KB)
+0002.053 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (0.6 MB, 3819 files batched, 501 (1002) added so far); re-opening (prior size: 2013.8 KB)
+0002.710 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 1100 files added (on-disk size: 2355.3 KB)
+0002.719 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 1200 files added (on-disk size: 2355.3 KB)
+0002.734 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 1300 files added (on-disk size: 2355.3 KB)
+0002.782 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 1400 files added (on-disk size: 2355.3 KB)
+0002.801 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 1500 files added (on-disk size: 2355.3 KB)
+0002.812 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (3.4 MB, 3819 files batched, 501 (1503) added so far); re-opening (prior size: 2355.3 KB)
+0004.100 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: size is now: 4.30 MB
+0004.126 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 1600 files added (on-disk size: 4370 KB)
+0004.167 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 1700 files added (on-disk size: 4370 KB)
+0004.184 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 1800 files added (on-disk size: 4370 KB)
+0004.202 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 1900 files added (on-disk size: 4370 KB)
+0004.214 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 2000 files added (on-disk size: 4370 KB)
+0004.217 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (18.6 MB, 3819 files batched, 501 (2004) added so far); re-opening (prior size: 4370 KB)
+0006.116 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: size is now: 9.70 MB
+0006.142 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 2100 files added (on-disk size: 9909.3 KB)
+0006.150 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 2200 files added (on-disk size: 9909.3 KB)
+0006.164 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 2300 files added (on-disk size: 9909.3 KB)
+0006.178 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 2400 files added (on-disk size: 9909.3 KB)
+0006.218 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 2500 files added (on-disk size: 9909.3 KB)
+0006.227 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (2.1 MB, 3819 files batched, 501 (2505) added so far); re-opening (prior size: 9909.3 KB)
+0006.895 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 2600 files added (on-disk size: 10651.2 KB)
+0006.935 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 2700 files added (on-disk size: 10651.2 KB)
+0006.947 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 2800 files added (on-disk size: 10651.2 KB)
+0006.959 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 2900 files added (on-disk size: 10651.2 KB)
+0006.968 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 3000 files added (on-disk size: 10651.2 KB)
+0006.971 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (7.8 MB, 3819 files batched, 501 (3006) added so far); re-opening (prior size: 10651.2 KB)
+0008.258 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: size is now: 13.70 MB
+0008.282 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 3100 files added (on-disk size: 14078.8 KB)
+0008.289 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 3200 files added (on-disk size: 14078.8 KB)
+0008.299 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 3300 files added (on-disk size: 14078.8 KB)
+0008.307 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 3400 files added (on-disk size: 14078.8 KB)
+0008.359 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 3500 files added (on-disk size: 14078.8 KB)
+0008.368 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (4.9 MB, 3819 files batched, 501 (3507) added so far); re-opening (prior size: 14078.8 KB)
+0009.157 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 3600 files added (on-disk size: 15686.5 KB)
+0009.164 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 3700 files added (on-disk size: 15686.5 KB)
+0009.172 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip.tmp: 3800 files added (on-disk size: 15686.5 KB)
+0010.213 (0) Created plugins zip (0) - 17507.9 KB in 9.5 s (1836.1 KB/s) (sha1: 841786072f2852944c4bbced70f920d5ca0d03a9, sha256: f03c2197597e3c5deb23aca40a8713fb7bc77ec0b00bcd03ba4c88298370ebd8)
+0010.224 (0) Beginning creation of dump of themes (split every: 400 MB)
+0010.361 (0) Total entities for the zip file: 162 directories, 1342 files (0 skipped as non-modified), 29.3 MB
+0010.376 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+0010.388 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-themes.zip.tmp: 200 files added (on-disk size: 0 KB)
+0010.397 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-themes.zip.tmp: 300 files added (on-disk size: 0 KB)
+0010.427 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-themes.zip.tmp: 400 files added (on-disk size: 0 KB)
+0010.443 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-themes.zip.tmp: 500 files added (on-disk size: 0 KB)
+0010.450 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (7.8 MB, 1342 files batched, 501 (501) added so far); re-opening (prior size: 0 KB)
+0011.143 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-themes.zip.tmp: size is now: 6.00 MB
+0011.161 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-themes.zip.tmp: 600 files added (on-disk size: 6164.1 KB)
+0011.170 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-themes.zip.tmp: 700 files added (on-disk size: 6164.1 KB)
+0011.179 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-themes.zip.tmp: 800 files added (on-disk size: 6164.1 KB)
+0011.189 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-themes.zip.tmp: 900 files added (on-disk size: 6164.1 KB)
+0011.233 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-themes.zip.tmp: 1000 files added (on-disk size: 6164.1 KB)
+0011.241 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (16.9 MB, 1342 files batched, 501 (1002) added so far); re-opening (prior size: 6164.1 KB)
+0012.528 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-themes.zip.tmp: size is now: 19.40 MB
+0012.549 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-themes.zip.tmp: 1100 files added (on-disk size: 19890 KB)
+0012.588 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-themes.zip.tmp: 1200 files added (on-disk size: 19890 KB)
+0012.600 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-themes.zip.tmp: 1300 files added (on-disk size: 19890 KB)
+0013.644 (0) Created themes zip (0) - 22725.6 KB in 3.4 s (6661.3 KB/s) (sha1: 532f48eea90e4395591476d2d347349d3d615a12, sha256: dcb19507b236b3b7ad2d64c79e797859980343693d81f5862e7b7015899a3145)
+0013.650 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+0013.652 (0) Looking for candidates to back up in: /Users/noxlady/Sites/blog/wp-content/uploads
+0013.655 (0) finding files: 2012: adding to list (1)
+0013.657 (0) finding files: .DS_Store: adding to list (2)
+0013.661 (0) finding files: 2008: adding to list (3)
+0013.668 (0) finding files: 2009: adding to list (4)
+0013.698 (0) finding files: 2017: adding to list (5)
+0013.701 (0) finding files: 2010: adding to list (6)
+0013.703 (0) finding files: 2018: adding to list (7)
+0013.706 (0) finding files: 2011: adding to list (8)
+0013.709 (0) finding files: 2016: adding to list (9)
+0013.711 (0) finding files: .htaccess: adding to list (10)
+0013.716 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0013.810 (0) Total entities for the zip file: 41 directories, 1613 files (0 skipped as non-modified), 31.6 MB
+0013.817 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-uploads.zip.tmp: 100 files added (on-disk size: 0 KB)
+0013.826 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-uploads.zip.tmp: 200 files added (on-disk size: 0 KB)
+0013.836 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-uploads.zip.tmp: 300 files added (on-disk size: 0 KB)
+0013.846 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-uploads.zip.tmp: 400 files added (on-disk size: 0 KB)
+0013.853 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-uploads.zip.tmp: 500 files added (on-disk size: 0 KB)
+0013.856 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (8 MB, 1613 files batched, 501 (501) added so far); re-opening (prior size: 0 KB)
+0014.662 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-uploads.zip.tmp: size is now: 8.10 MB
+0014.671 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-uploads.zip.tmp: 600 files added (on-disk size: 8286.7 KB)
+0014.684 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-uploads.zip.tmp: 700 files added (on-disk size: 8286.7 KB)
+0014.696 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-uploads.zip.tmp: 800 files added (on-disk size: 8286.7 KB)
+0014.704 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-uploads.zip.tmp: 900 files added (on-disk size: 8286.7 KB)
+0014.722 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-uploads.zip.tmp: 1000 files added (on-disk size: 8286.7 KB)
+0014.725 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (7.2 MB, 1613 files batched, 501 (1002) added so far); re-opening (prior size: 8286.7 KB)
+0015.247 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-uploads.zip.tmp: size is now: 15.40 MB
+0015.279 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-uploads.zip.tmp: 1100 files added (on-disk size: 15807.3 KB)
+0015.294 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-uploads.zip.tmp: 1200 files added (on-disk size: 15807.3 KB)
+0015.347 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-uploads.zip.tmp: 1300 files added (on-disk size: 15807.3 KB)
+0015.362 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-uploads.zip.tmp: 1400 files added (on-disk size: 15807.3 KB)
+0015.374 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-uploads.zip.tmp: 1500 files added (on-disk size: 15807.3 KB)
+0015.377 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (8.7 MB, 1613 files batched, 501 (1503) added so far); re-opening (prior size: 15807.3 KB)
+0015.920 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-uploads.zip.tmp: size is now: 24.30 MB
+0015.937 (0) Zip: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-uploads.zip.tmp: 1600 files added (on-disk size: 24832.4 KB)
+0016.569 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-uploads.zip.tmp: size is now: 31.90 MB
+0017.007 (0) Created uploads zip (0) - 32691.4 KB in 3.3 s (9952.3 KB/s) (sha1: a3a5f610159297e3d9eb20912faa1eeab0553f20, sha256: a0c7704049e218f0589373969469ce5f82fb3d22989b6c29658fcc98cf3cf8b9)
+0017.015 (0) Beginning backup of other directories found in the content directory (index: 0)
+0017.017 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0017.020 (0) Looking for candidates to back up in: /Users/noxlady/Sites/blog/wp-content
+0017.028 (0) finding files: upgrade: skipping: excluded by options
+0017.032 (0) finding files: .DS_Store: adding to list (1)
+0017.040 (0) finding files: index.php: adding to list (2)
+0017.054 (0) finding files: plugins: skipping: this is the plugins directory
+0017.083 (0) finding files: uploads: skipping: this is the uploads directory
+0017.085 (0) finding files: updraft: skipping: this is the updraft directory
+0017.088 (0) finding files: ai1wm-backups: skipping: excluded by options (glob)
+0017.090 (0) finding files: themes: skipping: this is the themes directory
+0017.098 (0) Total entities for the zip file: 0 directories, 2 files (0 skipped as non-modified), 0 MB
+0017.115 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-others.zip.tmp: size is now: 0.00 MB
+0017.126 (0) Created others zip (0) - 0.6 KB in 0 s (17.6 KB/s) (sha1: 3ca00fafedeec15a412e37bfa4e99fa4999667ce, sha256: ec2a8a658ea12412d9ebe1a00288eb70e77b25610dd008f7afa57f11b71641e3)
+0017.138 (0) Saving backup status to database (elements: 8)
+0017.143 (0) Beginning creation of database dump (WordPress DB)
+0017.152 (0) Testing: /usr/local/bin/mysqldump
+0017.592 (0) Output: /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;\n/*!40103 SET TIME_ZONE='+00:00' */;\n/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;\n/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;\n/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;\n/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;\nDROP TABLE IF EXISTS `wp_yxm592_options`;\n/*!40101 SET @saved_cs_client     = @@character_set_client */;\n/*!40101 SET character_set_client = utf8  (truncated - 1243 bytes total)
+0017.604 (0) Working binary mysqldump found: /usr/local/bin/mysqldump
+0017.618 (0) Table wp_yxm592_options: Total expected rows (approximate): 385
+0017.721 (0) Table wp_yxm592_options: Total rows added: 387 in 0.10 seconds
+0017.726 (0) Table wp_yxm592_options: finishing file (backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db-table-wp_yxm592_options.table.gz - 184.9 KB)
+0017.733 (0) Table wp_yxm592_users: Total expected rows (approximate): 3
+0017.740 (0) Table wp_yxm592_users: Total rows added: 3 in 0.01 seconds
+0017.743 (0) Table wp_yxm592_users: finishing file (backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db-table-wp_yxm592_users.table.gz - 0.7 KB)
+0017.753 (0) Table wp_yxm592_usermeta: Total expected rows (approximate): 53
+0017.761 (0) Table wp_yxm592_usermeta: Total rows added: 53 in 0.01 seconds
+0017.764 (0) Table wp_yxm592_usermeta: finishing file (backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db-table-wp_yxm592_usermeta.table.gz - 1.9 KB)
+0017.771 (0) Table wp_yxm592_commentmeta: Total expected rows (approximate): 12
+0017.799 (0) Table wp_yxm592_commentmeta: Total rows added: 12 in 0.03 seconds
+0017.836 (0) Table wp_yxm592_commentmeta: finishing file (backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db-table-wp_yxm592_commentmeta.table.gz - 0.6 KB)
+0017.883 (0) Table wp_yxm592_comments: Total expected rows (approximate): 4
+0017.923 (0) Table wp_yxm592_comments: Total rows added: 4 in 0.03 seconds
+0017.943 (0) Table wp_yxm592_comments: finishing file (backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db-table-wp_yxm592_comments.table.gz - 1.4 KB)
+0018.001 (0) Table wp_yxm592_links: Total expected rows (approximate): 0
+0018.007 (0) Table wp_yxm592_links: Total rows added: 0 in 0.00 seconds
+0018.010 (0) Table wp_yxm592_links: finishing file (backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db-table-wp_yxm592_links.table.gz - 0.5 KB)
+0018.020 (0) Table wp_yxm592_postmeta: Total expected rows (approximate): 2106
+0018.108 (0) Table wp_yxm592_postmeta: Total rows added: 2069 in 0.09 seconds
+0018.110 (0) Table wp_yxm592_postmeta: finishing file (backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db-table-wp_yxm592_postmeta.table.gz - 33.7 KB)
+0018.118 (0) Table wp_yxm592_posts: Total expected rows (approximate): 649
+0018.360 (0) Table wp_yxm592_posts: Total rows added: 771 in 0.24 seconds
+0018.373 (0) Table wp_yxm592_posts: finishing file (backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db-table-wp_yxm592_posts.table.gz - 251.9 KB)
+0018.406 (0) Table wp_yxm592_term_relationships: Total expected rows (approximate): 189
+0018.456 (0) Table wp_yxm592_term_relationships: Total rows added: 189 in 0.04 seconds
+0018.548 (0) Table wp_yxm592_term_relationships: finishing file (backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db-table-wp_yxm592_term_relationships.table.gz - 0.8 KB)
+0018.585 (0) Table wp_yxm592_term_taxonomy: Total expected rows (approximate): 13
+0018.685 (0) Table wp_yxm592_term_taxonomy: Total rows added: 13 in 0.09 seconds
+0018.696 (0) Table wp_yxm592_term_taxonomy: finishing file (backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db-table-wp_yxm592_term_taxonomy.table.gz - 0.6 KB)
+0018.816 (0) Table wp_yxm592_termmeta: Total expected rows (approximate): 0
+0018.876 (0) Table wp_yxm592_termmeta: Total rows added: 0 in 0.04 seconds
+0018.895 (0) Table wp_yxm592_termmeta: finishing file (backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db-table-wp_yxm592_termmeta.table.gz - 0.4 KB)
+0018.981 (0) Table wp_yxm592_terms: Total expected rows (approximate): 13
+0019.056 (0) Table wp_yxm592_terms: Total rows added: 13 in 0.04 seconds
+0019.075 (0) Table wp_yxm592_terms: finishing file (backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db-table-wp_yxm592_terms.table.gz - 0.6 KB)
+0019.140 (0) Table wp_yxm592_dynamic_widgets: Total expected rows (approximate): 12
+0019.191 (0) Table wp_yxm592_dynamic_widgets: Total rows added: 12 in 0.04 seconds
+0019.223 (0) Table wp_yxm592_dynamic_widgets: finishing file (backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db-table-wp_yxm592_dynamic_widgets.table.gz - 0.5 KB)
+0019.291 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db-table-wp_yxm592_options.table.gz (1/13): adding to final database dump
+0019.427 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db-table-wp_yxm592_users.table.gz (2/13): adding to final database dump
+0019.435 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db-table-wp_yxm592_usermeta.table.gz (3/13): adding to final database dump
+0019.449 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db-table-wp_yxm592_commentmeta.table.gz (4/13): adding to final database dump
+0019.468 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db-table-wp_yxm592_comments.table.gz (5/13): adding to final database dump
+0019.483 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db-table-wp_yxm592_links.table.gz (6/13): adding to final database dump
+0019.497 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db-table-wp_yxm592_postmeta.table.gz (7/13): adding to final database dump
+0019.592 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db-table-wp_yxm592_posts.table.gz (8/13): adding to final database dump
+0019.791 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db-table-wp_yxm592_term_relationships.table.gz (9/13): adding to final database dump
+0019.804 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db-table-wp_yxm592_term_taxonomy.table.gz (10/13): adding to final database dump
+0019.812 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db-table-wp_yxm592_termmeta.table.gz (11/13): adding to final database dump
+0019.826 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db-table-wp_yxm592_terms.table.gz (12/13): adding to final database dump
+0019.833 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db-table-wp_yxm592_dynamic_widgets.table.gz (13/13): adding to final database dump
+0019.845 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db.gz: finished writing out complete database file (448 KB)
+0019.958 (0) Total database tables backed up: 13 (backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db.gz, size: 487605, sha256)
+0020.028 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0020.045 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0020.057 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0020.068 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-others.zip: others: This file has not yet been successfully uploaded: will queue
+0020.075 (0) backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db.gz: db: This file has not yet been successfully uploaded: will queue
+0020.082 (0) Saving backup history. Total backup size: 71.7 MB
+0020.110 (0) Requesting upload of the files that have not yet been successfully uploaded (5)
+0020.154 (0) Cloud backup selection (1/1): dropbox (last)
+0020.183 (0) Beginning dispatch of backup to remote (dropbox)
+0020.197 (0) Dropbox: begin cloud upload (using API version 2 with OAuth v2 token)
+0020.273 (0) Dropbox: access gained; setting chunk size to: 1024 KB
+0020.857 (0) Dropbox quota usage: used=386916.1 MB, total=1084899 MB, available=697982.9 MB
+0020.860 (0) Dropbox: Attempt to upload: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip to: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip
+0023.315 (0) Dropbox chunked upload: 5.8 % uploaded (AAAAAAABbxu3Bz0HNUbWEw, 1048576, 3584 KB)
+0029.203 (0) Dropbox chunked upload: 26.3 % uploaded (AAAAAAABbxu3Bz0HNUbWEw, 4718592, 5120 KB)
+0036.626 (0) Dropbox chunked upload: 55.6 % uploaded (AAAAAAABbxu3Bz0HNUbWEw, 9961472, 6144 KB)
+0051.838 (0) Dropbox chunked upload: 90.7 % uploaded (AAAAAAABbxu3Bz0HNUbWEw, 16252928, 6144 KB)
+0057.721 (0) Dropbox chunked upload: 100 % uploaded (AAAAAAABbxu3Bz0HNUbWEw, 17928099, 6144 KB)
+0060.067 (0) Recording as successfully uploaded: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip (53eaab6277822b956f9688c6dd5c9287)
+0060.081 (0) Deleting local file: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip: OK
+0060.084 (0) Dropbox: File upload success (backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-plugins.zip): 17507 KB in 39s (446 KB/s)
+0060.630 (0) Dropbox quota usage: used=386933.2 MB, total=1084899 MB, available=697965.8 MB
+0060.632 (0) Dropbox: Attempt to upload: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-themes.zip to: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-themes.zip
+0070.294 (0) Dropbox chunked upload: 27 % uploaded (AAAAAAABbxzxBsr46X9WmA, 6291456, 5632 KB)
+0078.725 (0) Dropbox chunked upload: 51.8 % uploaded (AAAAAAABbxzxBsr46X9WmA, 12058624, 5632 KB)
+0091.577 (0) Dropbox chunked upload: 76.6 % uploaded (AAAAAAABbxzxBsr46X9WmA, 17825792, 5632 KB)
+0106.742 (0) Dropbox chunked upload: 100 % uploaded (AAAAAAABbxzxBsr46X9WmA, 23270995, 5632 KB)
+0108.374 (0) Recording as successfully uploaded: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-themes.zip (236298e0de8658bc8774c81172d77c97)
+0108.386 (0) Deleting local file: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-themes.zip: OK
+0108.388 (0) Dropbox: File upload success (backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-themes.zip): 22725 KB in 47s (475 KB/s)
+0108.992 (0) Dropbox quota usage: used=386955.4 MB, total=1084899 MB, available=697943.6 MB
+0108.994 (0) Dropbox: Attempt to upload: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-uploads.zip to: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-uploads.zip
+0125.946 (0) Dropbox chunked upload: 17.2 % uploaded (AAAAAAABbx3BaVTzmNnUcQ, 5767168, 5632 KB)
+0137.374 (0) Dropbox chunked upload: 34.5 % uploaded (AAAAAAABbx3BaVTzmNnUcQ, 11534336, 5632 KB)
+0145.924 (0) Dropbox chunked upload: 51.7 % uploaded (AAAAAAABbx3BaVTzmNnUcQ, 17301504, 5632 KB)
+0154.179 (0) Dropbox chunked upload: 68.9 % uploaded (AAAAAAABbx3BaVTzmNnUcQ, 23068672, 6144 KB)
+0168.667 (0) Dropbox chunked upload: 87.7 % uploaded (AAAAAAABbx3BaVTzmNnUcQ, 29360128, 6144 KB)
+0174.388 (0) Dropbox chunked upload: 100 % uploaded (AAAAAAABbx3BaVTzmNnUcQ, 33476039, 6144 KB)
+0176.279 (0) Recording as successfully uploaded: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-uploads.zip (d91e1c2567623d70dd61933c34121d39)
+0176.287 (0) Deleting local file: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-uploads.zip: OK
+0176.289 (0) Dropbox: File upload success (backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-uploads.zip): 32691 KB in 67s (485 KB/s)
+0176.830 (0) Dropbox quota usage: used=386987.3 MB, total=1084899 MB, available=697911.7 MB
+0176.833 (0) Dropbox: Attempt to upload: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-others.zip to: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-others.zip
+0177.672 (0) Dropbox chunked upload: 100 % uploaded (AAAAAAABbx4mNCKImHiSAg, 576, 6144 KB)
+0179.350 (0) Recording as successfully uploaded: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-others.zip (b92ae4fedcf9cabb635ffc7a7a08f589)
+0179.388 (0) Deleting local file: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-others.zip: OK
+0179.396 (0) Dropbox: File upload success (backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-others.zip): 0 KB in 2s (0 KB/s)
+0179.970 (0) Dropbox quota usage: used=386987.3 MB, total=1084899 MB, available=697911.7 MB
+0179.971 (0) Dropbox: Attempt to upload: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db.gz to: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db.gz
+0182.077 (0) Dropbox chunked upload: 100 % uploaded (AAAAAAABbx9WNxEklE4EAw, 487605, 6144 KB)
+0184.172 (0) Recording as successfully uploaded: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db.gz (46f8403504f96f78a3193830e3248505)
+0184.185 (0) Deleting local file: backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db.gz: OK
+0184.188 (0) Dropbox: File upload success (backup_2018-03-28-2248_Out_of_my_mind_7640be4e697d-db.gz): 476 KB in 4s (112 KB/s)
+0184.198 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=14, retain_db=14
+0184.204 (0) Number of backup sets in history: 15; groups (db): 1
+0184.213 (0) Examining (for databases) backup set with group_id=0, nonce=7640be4e697d, datestamp=1522277327 (Mar 28 2018 22:48:47)
+0184.266 (0) This backup set is the backup set just made, so will not be deleted.
+0184.280 (0) Examining (for databases) backup set with group_id=0, nonce=911fc63c1d4a, datestamp=1493499987 (Apr 29 2017 21:06:27)
+0184.282 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0184.284 (0) Examining (for databases) backup set with group_id=0, nonce=2efdc56a7dcb, datestamp=1493155009 (Apr 25 2017 21:16:49)
+0184.286 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0184.288 (0) Examining (for databases) backup set with group_id=0, nonce=13778ce4b96c, datestamp=1493084403 (Apr 25 2017 01:40:03)
+0184.291 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0184.293 (0) Examining (for databases) backup set with group_id=0, nonce=f50dd6fe0ba1, datestamp=1492721429 (Apr 20 2017 20:50:29)
+0184.295 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0184.298 (0) Examining (for databases) backup set with group_id=0, nonce=4b673c0b8ee3, datestamp=1492659838 (Apr 20 2017 03:43:58)
+0184.308 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0184.322 (0) Examining (for databases) backup set with group_id=0, nonce=9dc157a6eb05, datestamp=1492479653 (Apr 18 2017 01:40:53)
+0184.343 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0184.369 (0) Examining (for databases) backup set with group_id=0, nonce=a4c7b8114bbd, datestamp=1492150338 (Apr 14 2017 06:12:18)
+0184.382 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0184.390 (0) Examining (for databases) backup set with group_id=0, nonce=3a30168e73e9, datestamp=1491877846 (Apr 11 2017 02:30:46)
+0184.401 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0184.408 (0) Examining (for databases) backup set with group_id=0, nonce=3607bc54a356, datestamp=1491554371 (Apr 07 2017 08:39:31)
+0184.421 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0184.423 (0) Examining (for databases) backup set with group_id=0, nonce=809e098af373, datestamp=1491495001 (Apr 06 2017 16:10:01)
+0184.425 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0184.430 (0) Examining (for databases) backup set with group_id=0, nonce=489d997f03fa, datestamp=1491270063 (Apr 04 2017 01:41:03)
+0184.433 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0184.436 (0) Examining (for databases) backup set with group_id=0, nonce=d2e63b2b98da, datestamp=1491017911 (Apr 01 2017 03:38:31)
+0184.438 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0184.440 (0) Examining (for databases) backup set with group_id=0, nonce=a76a0a2a969b, datestamp=1490904358 (Mar 30 2017 20:05:58)
+0184.444 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0184.447 (0) Examining (for databases) backup set with group_id=0, nonce=8bf5c356e5e2, datestamp=1490801251 (Mar 29 2017 15:27:31)
+0184.449 (0) 1490801251: db: this set includes a database (backup_2017-03-29-1527_Out_of_my_mind_8bf5c356e5e2-db.gz); db count is now 14
+0184.452 (0) 1490801251: db: over retain limit (14); will delete this database
+0184.454 (0) Delete file: backup_2017-03-29-1527_Out_of_my_mind_8bf5c356e5e2-db.gz, service=dropbox
+0184.458 (0) Dropbox: request deletion: backup_2017-03-29-1527_Out_of_my_mind_8bf5c356e5e2-db.gz
+0185.416 (0) Dropbox: delete succeeded
+0185.422 (0) This backup set remains non-empty (f=1/d=0); will retain in history
+0185.427 (0) Number of backup sets in history: 15; groups (files): 1
+0185.434 (0) Examining (for files) backup set with nonce=7640be4e697d, datestamp=1522277327 (Mar 28 2018 22:48:47)
+0185.447 (0) This backup set is the backup set just made, so will not be deleted.
+0185.455 (0) This backup set is the backup set just made, so will not be deleted.
+0185.456 (0) This backup set is the backup set just made, so will not be deleted.
+0185.456 (0) This backup set is the backup set just made, so will not be deleted.
+0185.458 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0185.460 (0) Examining (for files) backup set with nonce=911fc63c1d4a, datestamp=1493499987 (Apr 29 2017 21:06:27)
+0185.462 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0185.465 (0) Examining (for files) backup set with nonce=2efdc56a7dcb, datestamp=1493155009 (Apr 25 2017 21:16:49)
+0185.468 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0185.477 (0) Examining (for files) backup set with nonce=13778ce4b96c, datestamp=1493084403 (Apr 25 2017 01:40:03)
+0185.490 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0185.508 (0) Examining (for files) backup set with nonce=f50dd6fe0ba1, datestamp=1492721429 (Apr 20 2017 20:50:29)
+0185.524 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0185.537 (0) Examining (for files) backup set with nonce=4b673c0b8ee3, datestamp=1492659838 (Apr 20 2017 03:43:58)
+0185.558 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0185.588 (0) Examining (for files) backup set with nonce=9dc157a6eb05, datestamp=1492479653 (Apr 18 2017 01:40:53)
+0185.596 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0185.599 (0) Examining (for files) backup set with nonce=a4c7b8114bbd, datestamp=1492150338 (Apr 14 2017 06:12:18)
+0185.602 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0185.607 (0) Examining (for files) backup set with nonce=3a30168e73e9, datestamp=1491877846 (Apr 11 2017 02:30:46)
+0185.611 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0185.615 (0) Examining (for files) backup set with nonce=3607bc54a356, datestamp=1491554371 (Apr 07 2017 08:39:31)
+0185.618 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0185.620 (0) Examining (for files) backup set with nonce=809e098af373, datestamp=1491495001 (Apr 06 2017 16:10:01)
+0185.624 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0185.626 (0) Examining (for files) backup set with nonce=489d997f03fa, datestamp=1491270063 (Apr 04 2017 01:41:03)
+0185.629 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0185.631 (0) Examining (for files) backup set with nonce=d2e63b2b98da, datestamp=1491017911 (Apr 01 2017 03:38:31)
+0185.634 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0185.638 (0) Examining (for files) backup set with nonce=a76a0a2a969b, datestamp=1490904358 (Mar 30 2017 20:05:58)
+0185.641 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0185.644 (0) Examining (for files) backup set with nonce=8bf5c356e5e2, datestamp=1490801251 (Mar 29 2017 15:27:31)
+0185.647 (0) plugins: over retain limit (14); will delete this file entity
+0185.650 (0) themes: over retain limit (14); will delete this file entity
+0185.652 (0) uploads: over retain limit (14); will delete this file entity
+0185.655 (0) others: over retain limit (14); will delete this file entity
+0185.657 (0) Delete file: backup_2017-03-29-1527_Out_of_my_mind_8bf5c356e5e2-plugins.zip, service=dropbox
+0185.660 (0) Delete file: backup_2017-03-29-1527_Out_of_my_mind_8bf5c356e5e2-themes.zip, service=dropbox
+0185.662 (0) Delete file: backup_2017-03-29-1527_Out_of_my_mind_8bf5c356e5e2-uploads.zip, service=dropbox
+0185.664 (0) Delete file: backup_2017-03-29-1527_Out_of_my_mind_8bf5c356e5e2-others.zip, service=dropbox
+0185.667 (0) Dropbox: request deletion: backup_2017-03-29-1527_Out_of_my_mind_8bf5c356e5e2-plugins.zip
+0186.664 (0) Dropbox: delete succeeded
+0186.667 (0) Dropbox: request deletion: backup_2017-03-29-1527_Out_of_my_mind_8bf5c356e5e2-themes.zip
+0187.989 (0) Dropbox: delete succeeded
+0187.992 (0) Dropbox: request deletion: backup_2017-03-29-1527_Out_of_my_mind_8bf5c356e5e2-uploads.zip
+0189.109 (0) Dropbox: delete succeeded
+0189.112 (0) Dropbox: request deletion: backup_2017-03-29-1527_Out_of_my_mind_8bf5c356e5e2-others.zip
+0190.078 (0) Dropbox: delete succeeded
+0190.110 (0) This backup set is now empty; will remove from history
+0190.122 (0) Corresponding log file (log.8bf5c356e5e2.txt) not found - must have already been deleted
+0190.129 (0) Retain: saving new backup history (sets now: 14) and finishing retain operation
+0190.242 (0) Resume backup (7640be4e697d, 0): finish run
+0190.283 (0) Decremented the semaphore (fd) by 1
+0190.302 (0) Semaphore (fd) unlocked
+0190.344 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0190.399 (0) No email will/can be sent - the user has not configured an email address.
+0190.401 (0) The backup apparently succeeded and is now complete

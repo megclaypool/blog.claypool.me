@@ -116,6 +116,45 @@ if ( ! function_exists( 'poseidon_header_image' ) ) :
 endif;
 
 
+if ( ! function_exists( 'poseidon_blog_title' ) ) :
+	/**
+	 * Displays the blog title and description on the blog index (home.php)
+	 */
+	function poseidon_blog_title() {
+
+		// Get theme options from database.
+		$theme_options = poseidon_theme_options();
+
+		// Set blog title and descripton.
+		$blog_title = $theme_options['latest_posts_title'];
+		$blog_description = $theme_options['blog_description'];
+
+		// Display Blog Title.
+		if ( '' !== $blog_title || '' !== $blog_description || is_customize_preview() ) : ?>
+
+			<header class="page-header blog-header clearfix">
+
+				<?php // Display Blog Title.
+				if ( '' !== $blog_title || is_customize_preview() ) : ?>
+
+					<h2 class="archive-title blog-title"><?php echo wp_kses_post( $blog_title ); ?></h2>
+
+				<?php endif;
+
+				// Display Blog Description.
+				if ( '' !== $blog_description || is_customize_preview() ) : ?>
+
+					<p class="blog-description"><?php echo wp_kses_post( $blog_description ); ?></p>
+
+				<?php endif; ?>
+
+			</header>
+
+		<?php endif;
+	}
+endif;
+
+
 if ( ! function_exists( 'poseidon_post_image' ) ) :
 	/**
 	 * Displays the featured image on archive posts.
@@ -150,7 +189,7 @@ if ( ! function_exists( 'poseidon_post_image_archives' ) ) :
 		// Return early if no featured image should be displayed.
 		if ( 'none' == $theme_options['post_layout_archives'] ) :
 			return;
-			endif;
+		endif;
 
 		// Display featured image beside post content.
 		if ( 'left' == $theme_options['post_layout_archives'] ) : ?>
@@ -198,37 +237,11 @@ if ( ! function_exists( 'poseidon_entry_meta' ) ) :
 	 */
 	function poseidon_entry_meta() {
 
-		// Get theme options from database.
-		$theme_options = poseidon_theme_options();
+		$postmeta = poseidon_meta_date();
+		$postmeta .= poseidon_meta_author();
+		$postmeta .= poseidon_meta_category();
 
-		$postmeta = '';
-
-		// Display date unless user has deactivated it via settings.
-		if ( true === $theme_options['meta_date'] ) {
-
-			$postmeta .= poseidon_meta_date();
-
-		}
-
-		// Display author unless user has deactivated it via settings.
-		if ( true === $theme_options['meta_author'] ) {
-
-			$postmeta .= poseidon_meta_author();
-
-		}
-
-		// Display categories unless user has deactivated it via settings.
-		if ( true === $theme_options['meta_category'] ) {
-
-			$postmeta .= poseidon_meta_category();
-
-		}
-
-		if ( $postmeta ) {
-
-			echo '<div class="entry-meta">' . $postmeta . '</div>';
-
-		}
+		echo '<div class="entry-meta">' . $postmeta . '</div>';
 	}
 endif;
 
@@ -286,14 +299,11 @@ if ( ! function_exists( 'poseidon_entry_tags' ) ) :
 	 */
 	function poseidon_entry_tags() {
 
-		// Get theme options from database.
-		$theme_options = poseidon_theme_options();
-
 		// Get tags.
 		$tag_list = get_the_tag_list( '', '' );
 
 		// Display tags.
-		if ( $tag_list && $theme_options['meta_tags'] ) : ?>
+		if ( $tag_list ) : ?>
 
 			<div class="entry-tags clearfix">
 				<span class="meta-tags">
@@ -330,7 +340,7 @@ if ( ! function_exists( 'poseidon_post_navigation' ) ) :
 		// Get theme options from database.
 		$theme_options = poseidon_theme_options();
 
-		if ( true === $theme_options['post_navigation'] ) {
+		if ( true === $theme_options['post_navigation'] || is_customize_preview() ) {
 
 			the_post_navigation( array(
 				'prev_text' => '<span class="screen-reader-text">' . esc_html_x( 'Previous Post:', 'post navigation', 'poseidon' ) . '</span>%title',

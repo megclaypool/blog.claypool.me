@@ -5,6 +5,7 @@ require_once( JETPACK__PLUGIN_DIR . 'modules/sso/class.jetpack-sso-helpers.php' 
  * Just some defaults that we share with the server
  */
 class Jetpack_Sync_Defaults {
+
 	static $default_options_whitelist = array(
 		'stylesheet',
 		'blogname',
@@ -13,6 +14,7 @@ class Jetpack_Sync_Defaults {
 		'permalink_structure',
 		'category_base',
 		'tag_base',
+		'sidebars_widgets',
 		'comment_moderation',
 		'default_comment_status',
 		'page_on_front',
@@ -100,7 +102,6 @@ class Jetpack_Sync_Defaults {
 		'post_by_email_address',
 		'jetpack_protect_key',
 		'jetpack_protect_global_whitelist',
-		'sharing_services',
 		'jetpack_sso_require_two_step',
 		'jetpack_relatedposts',
 		'verification_services_codes',
@@ -111,6 +112,21 @@ class Jetpack_Sync_Defaults {
 		'advanced_seo_title_formats', // Jetpack_SEO_Titles::TITLE_FORMATS_OPTION
 		'jetpack_api_cache_enabled',
 	);
+
+	public static function get_options_whitelist() {
+		/** This filter is already documented in json-endpoints/jetpack/class.wpcom-json-api-get-option-endpoint.php */
+		$options_whitelist = apply_filters( 'jetpack_options_whitelist', self::$default_options_whitelist );
+		/**
+		 * Filter the list of WordPress options that are manageable via the JSON API.
+		 *
+		 * @module sync
+		 *
+		 * @since 4.8
+		 *
+		 * @param array The default list of options.
+		 */
+		return apply_filters( 'jetpack_sync_options_whitelist', $options_whitelist );
+	}
 
 	static $default_constants_whitelist = array(
 		'EMPTY_TRASH_DAYS',
@@ -129,8 +145,23 @@ class Jetpack_Sync_Defaults {
 		'DISABLE_WP_CRON',
 		'ALTERNATE_WP_CRON',
 		'WP_CRON_LOCK_TIMEOUT',
-		'PHP_VERSION'
+		'PHP_VERSION',
+		'WP_MEMORY_LIMIT',
+		'WP_MAX_MEMORY_LIMIT'
 	);
+
+	public static function get_constants_whitelist() {
+		/**
+		 * Filter the list of PHP constants that are manageable via the JSON API.
+		 *
+		 * @module sync
+		 *
+		 * @since 4.8
+		 *
+		 * @param array The default list of constants options.
+		 */
+		return apply_filters( 'jetpack_sync_constants_whitelist', self::$default_constants_whitelist );
+	}
 
 	static $default_callable_whitelist = array(
 		'wp_max_upload_size'               => 'wp_max_upload_size',
@@ -156,20 +187,85 @@ class Jetpack_Sync_Defaults {
 		'sso_bypass_default_login_form'    => array( 'Jetpack_SSO_Helpers', 'bypass_login_forward_wpcom' ),
 		'wp_version'                       => array( 'Jetpack_Sync_Functions', 'wp_version' ),
 		'get_plugins'                      => array( 'Jetpack_Sync_Functions', 'get_plugins' ),
+		'get_plugins_action_links'		   => array( 'Jetpack_Sync_functions', 'get_plugins_action_links' ),
 		'active_modules'                   => array( 'Jetpack', 'get_active_modules' ),
 		'hosting_provider'                 => array( 'Jetpack_Sync_Functions', 'get_hosting_provider' ),
 		'locale'                           => 'get_locale',
 		'site_icon_url'                    => array( 'Jetpack_Sync_Functions', 'site_icon_url' ),
+		'roles'                            =>  array( 'Jetpack_Sync_Functions', 'roles' ),
 	);
+
+
+	static $default_post_type_attributes = array(
+		'name'                => '',
+		'label'               => '',
+		'labels'              => array(),
+		'description'         => '',
+		'public'              => false,
+		'hierarchical'        => false,
+		'exclude_from_search' => true,
+		'publicly_queryable'  => null,
+		'show_ui'             => false,
+		'show_in_menu'        => null,
+		'show_in_nav_menus'   => null,
+		'show_in_admin_bar'   => false,
+		'menu_position'       => null,
+		'menu_icon'           => null,
+		'supports'            => array(),
+		'capability_type'     => 'post',
+		'capabilities'        => array(),
+		'cap'                 => array(),
+		'map_meta_cap'        => true,
+		'taxonomies'          => array(),
+		'has_archive'         => false,
+		'rewrite'             => true,
+		'query_var'           => true,
+		'can_export'          => true,
+		'delete_with_user'    => null,
+		'show_in_rest'        => false,
+		'rest_base'           => false,
+		'_builtin'            => false,
+		'_edit_link'          => 'post.php?post=%d',
+	);
+
+	public static function get_callable_whitelist() {
+		/**
+		 * Filter the list of callables that are manageable via the JSON API.
+		 *
+		 * @module sync
+		 *
+		 * @since 4.8
+		 *
+		 * @param array The default list of callables.
+		 */
+		return apply_filters( 'jetpack_sync_callable_whitelist', self::$default_callable_whitelist );
+	}
 
 	static $blacklisted_post_types = array(
 		'ai1ec_event',
-		'snitch',
-		'secupress_log_action',
-		'http',
-		'bwg_gallery',
 		'bwg_album',
+		'bwg_gallery',
+		'customize_changeset', // WP built-in post type for Customizer changesets
+		'dn_wp_yt_log',
+		'http',
 		'idx_page',
+		'jetpack_migration',
+		'postman_sent_mail',
+		'rssap-feed',
+		'rssmi_feed_item',
+		'secupress_log_action',
+		'sg_optimizer_jobs',
+		'snitch',
+		'wpephpcompat_jobs',
+		'wprss_feed_item',
+		'wp_automatic',
+		'jp_sitemap_master',
+		'jp_sitemap',
+		'jp_sitemap_index',
+		'jp_img_sitemap',
+		'jp_img_sitemap_index',
+		'jp_vid_sitemap',
+		'jp_vid_sitemap_index',
 	);
 
 	static $default_post_checksum_columns = array(
@@ -205,6 +301,19 @@ class Jetpack_Sync_Defaults {
 		'network_upload_file_types'           => array( 'Jetpack', 'network_upload_file_types' ),
 		'network_enable_administration_menus' => array( 'Jetpack', 'network_enable_administration_menus' ),
 	);
+
+	public static function get_multisite_callable_whitelist() {
+		/**
+		 * Filter the list of multisite callables that are manageable via the JSON API.
+		 *
+		 * @module sync
+		 *
+		 * @since 4.8
+		 *
+		 * @param array The default list of multisite callables.
+		 */
+		return apply_filters( 'jetpack_sync_multisite_callable_whitelist', self::$default_multisite_callable_whitelist );
+	}
 
 	static $post_meta_whitelist = array(
 		'_feedback_akismet_values',
@@ -246,12 +355,38 @@ class Jetpack_Sync_Defaults {
 		'advanced_seo_description', // Jetpack_SEO_Posts::DESCRIPTION_META_KEY
 	);
 
+	public static function get_post_meta_whitelist() {
+		/**
+		 * Filter the list of post meta data that are manageable via the JSON API.
+		 *
+		 * @module sync
+		 *
+		 * @since 4.8
+		 *
+		 * @param array The default list of meta data keys.
+		 */
+		return apply_filters( 'jetpack_sync_post_meta_whitelist', self::$post_meta_whitelist );
+	}
+
 	static $comment_meta_whitelist = array(
 		'hc_avatar',
 		'hc_post_as',
 		'hc_wpcom_id_sig',
 		'hc_foreign_user_id'
 	);
+
+	public static function get_comment_meta_whitelist() {
+		/**
+		 * Filter the list of comment meta data that are manageable via the JSON API.
+		 *
+		 * @module sync
+		 *
+		 * @since 5.7.0
+		 *
+		 * @param array The default list of comment meta data keys.
+		 */
+		return apply_filters( 'jetpack_sync_comment_meta_whitelist', self::$comment_meta_whitelist );
+	}
 
 	// TODO: move this to server? - these are theme support values
 	// that should be synced as jetpack_current_theme_supports_foo option values
@@ -283,6 +418,78 @@ class Jetpack_Sync_Defaults {
 		}
 
 		return false;
+	}
+
+	static $default_capabilities_whitelist = array(
+		'switch_themes',
+		'edit_themes',
+		'edit_theme_options',
+		'install_themes',
+		'activate_plugins',
+		'edit_plugins',
+		'install_plugins',
+		'edit_users',
+		'edit_files',
+		'manage_options',
+		'moderate_comments',
+		'manage_categories',
+		'manage_links',
+		'upload_files',
+		'import',
+		'unfiltered_html',
+		'edit_posts',
+		'edit_others_posts',
+		'edit_published_posts',
+		'publish_posts',
+		'edit_pages',
+		'read',
+		'publish_pages',
+		'edit_others_pages',
+		'edit_published_pages',
+		'delete_pages',
+		'delete_others_pages',
+		'delete_published_pages',
+		'delete_posts',
+		'delete_others_posts',
+		'delete_published_posts',
+		'delete_private_posts',
+		'edit_private_posts',
+		'read_private_posts',
+		'delete_private_pages',
+		'edit_private_pages',
+		'read_private_pages',
+		'delete_users',
+		'create_users',
+		'unfiltered_upload',
+		'edit_dashboard',
+		'customize',
+		'delete_site',
+		'update_plugins',
+		'delete_plugins',
+		'update_themes',
+		'update_core',
+		'list_users',
+		'remove_users',
+		'add_users',
+		'promote_users',
+		'delete_themes',
+		'export',
+		'edit_comment',
+		'upload_plugins',
+		'upload_themes',
+	);
+
+	public static function get_capabilities_whitelist() {
+		/**
+		 * Filter the list of capabilities that we care about
+		 *
+		 * @module sync
+		 *
+		 * @since 5.5.0
+		 *
+		 * @param array The default list of capabilities.
+		 */
+		return apply_filters( 'jetpack_sync_capabilities_whitelist', self::$default_capabilities_whitelist );
 	}
 
 	static function get_max_sync_execution_time() {

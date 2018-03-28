@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2017 ServMask Inc.
+ * Copyright (C) 2014-2018 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -33,11 +33,11 @@ class Ai1wm_Import_Enumerate {
 		// Open the archive file for reading
 		$archive = new Ai1wm_Extractor( ai1wm_archive_path( $params ) );
 
-		// Get total files
-		$params['total_files'] = $archive->get_total_files();
+		// Get total files count
+		$params['total_files_count'] = $archive->get_total_files_count();
 
-		// Get total size
-		$params['total_size'] = $archive->get_total_size();
+		// Get total files size
+		$params['total_files_size'] = $archive->get_total_files_size();
 
 		// Close the archive file
 		$archive->close();

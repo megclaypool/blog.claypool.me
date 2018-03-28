@@ -375,7 +375,7 @@ function add_style_settings() {
 		.post-readmore:hover,.post-navigation .nav-previous a:hover,.post-navigation .nav-next a:hover,.pagination a:hover,.pagination .currenttext,.error-404 input[type="submit"]:hover,input[type="submit"]:hover{ border: 2px solid <?php echo $theme_color ?>;}
 		
 		<!--Menu Hover-->
-		.main-navigation .current_page_item > a,.main-navigation .current-menu-item > a,.main-navigation .current_page_ancestor > a,.main-navigation li:hover > a,.main-navigation li.focus > a,.head-nav ul ul { background: <?php echo $theme_color ?>; }
+		.main-navigation .current_page_item > a,.main-navigation .current-menu-item > a,.main-navigation .current_page_ancestor > a,.main-navigation li:hover > a,.main-navigation li.focus > a,.head-nav ul ul, .menu-navigation #main-menu { background: <?php echo $theme_color ?>; }
 		
 	</style>
 	<?php

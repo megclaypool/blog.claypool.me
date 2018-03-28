@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2017 ServMask Inc.
+ * Copyright (C) 2014-2018 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -35,9 +35,12 @@ class Ai1wm_Export_Controller {
 		// Set error handler
 		@set_error_handler( 'Ai1wm_Handler::error' );
 
+		// Set shutdown handler
+		@register_shutdown_function( 'Ai1wm_Handler::shutdown' );
+
 		// Set params
 		if ( empty( $params ) ) {
-			$params = ai1wm_urldecode( $_REQUEST );
+			$params = stripslashes_deep( $_REQUEST );
 		}
 
 		// Set priority
@@ -49,15 +52,13 @@ class Ai1wm_Export_Controller {
 		// Set secret key
 		$secret_key = null;
 		if ( isset( $params['secret_key'] ) ) {
-			$secret_key = $params['secret_key'];
+			$secret_key = trim( $params['secret_key'] );
 		}
 
-		// Verify secret key by using the value in the database, not in cache
-		if ( $secret_key !== get_option( AI1WM_SECRET_KEY ) ) {
-			Ai1wm_Status::error(
-				sprintf( __( 'Unable to authenticate your request with secret_key = "%s"', AI1WM_PLUGIN_NAME ), $secret_key ),
-				__( 'Unable to export', AI1WM_PLUGIN_NAME )
-			);
+		try {
+			// Ensure that unauthorized people cannot access export action
+			ai1wm_verify_secret_key( $secret_key );
+		} catch ( Ai1wm_Not_Valid_Secret_Key_Exception $e ) {
 			exit;
 		}
 
@@ -65,8 +66,8 @@ class Ai1wm_Export_Controller {
 		if ( isset( $wp_filter['ai1wm_export'] ) && ( $filters = $wp_filter['ai1wm_export'] ) ) {
 			// WordPress 4.7 introduces new class for working with filters/actions called WP_Hook
 			// which adds another level of abstraction and we need to address it.
-			if ( is_object( $filters ) ) {
-				$filters = current( $filters );
+			if ( isset( $filters->callbacks ) ) {
+				$filters = $filters->callbacks;
 			}
 
 			ksort( $filters );
@@ -84,7 +85,8 @@ class Ai1wm_Export_Controller {
 							Ai1wm_Log::export( $params );
 
 						} catch ( Exception $e ) {
-							Ai1wm_Status::error( $e->getMessage(), __( 'Unable to export', AI1WM_PLUGIN_NAME ) );
+							Ai1wm_Status::error( $e->getMessage() );
+							Ai1wm_Directory::delete( ai1wm_storage_path( $params ) );
 							exit;
 						}
 					}
@@ -120,6 +122,7 @@ class Ai1wm_Export_Controller {
 			apply_filters( 'ai1wm_export_s3', Ai1wm_Template::get_content( 'export/button-s3' ) ),
 			apply_filters( 'ai1wm_export_onedrive', Ai1wm_Template::get_content( 'export/button-onedrive' ) ),
 			apply_filters( 'ai1wm_export_box', Ai1wm_Template::get_content( 'export/button-box' ) ),
+			apply_filters( 'ai1wm_export_mega', Ai1wm_Template::get_content( 'export/button-mega' ) ),
 		);
 	}
 }

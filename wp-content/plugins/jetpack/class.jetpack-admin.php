@@ -60,12 +60,12 @@ class Jetpack_Admin {
 	// presentation like description, name, configuration url, etc.
 	function get_modules() {
 		include_once( JETPACK__PLUGIN_DIR . 'modules/module-info.php' );
-		$available_modules = $this->jetpack->get_available_modules();
-		$active_modules    = $this->jetpack->get_active_modules();
+		$available_modules = Jetpack::get_available_modules();
+		$active_modules    = Jetpack::get_active_modules();
 		$modules           = array();
 		$jetpack_active = Jetpack::is_active() || Jetpack::is_development_mode();
 		foreach ( $available_modules as $module ) {
-			if ( $module_array = $this->jetpack->get_module( $module ) ) {
+			if ( $module_array = Jetpack::get_module( $module ) ) {
 				/**
 				 * Filters each module's short description.
 				 *
@@ -236,6 +236,7 @@ class Jetpack_Admin {
 	}
 
 	function admin_menu_debugger() {
+		Jetpack_Debugger::disconnect_and_redirect();
 		$debugger_hook = add_submenu_page( null, __( 'Jetpack Debugging Center', 'jetpack' ), '', 'manage_options', 'jetpack-debugger', array( $this, 'debugger_page' ) );
 		add_action( "admin_head-$debugger_hook", array( 'Jetpack_Debugger', 'jetpack_debug_admin_head' ) );
 	}

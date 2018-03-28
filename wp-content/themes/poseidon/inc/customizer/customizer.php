@@ -7,12 +7,15 @@
 
 // Load Customizer Helper Functions.
 require( get_template_directory() . '/inc/customizer/functions/custom-controls.php' );
+require( get_template_directory() . '/inc/customizer/functions/magazine-widget-area-control.php' );
 require( get_template_directory() . '/inc/customizer/functions/sanitize-functions.php' );
 require( get_template_directory() . '/inc/customizer/functions/callback-functions.php' );
 
 // Load Customizer Section Files.
 require( get_template_directory() . '/inc/customizer/sections/customizer-general.php' );
+require( get_template_directory() . '/inc/customizer/sections/customizer-blog.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-post.php' );
+require( get_template_directory() . '/inc/customizer/sections/customizer-magazine.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-slider.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-upgrade.php' );
 
@@ -142,16 +145,25 @@ function poseidon_customize_partial_blogdescription() {
  * Embed JS file to make Theme Customizer preview reload changes asynchronously.
  */
 function poseidon_customize_preview_js() {
-	wp_enqueue_script( 'poseidon-customizer-preview', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20161214', true );
+	wp_enqueue_script( 'poseidon-customize-preview', get_template_directory_uri() . '/js/customize-preview.js', array( 'customize-preview' ), '20170806', true );
 }
 add_action( 'customize_preview_init', 'poseidon_customize_preview_js' );
+
+
+/**
+ * Embed JS for Customizer Controls.
+ */
+function poseidon_customizer_controls_js() {
+	wp_enqueue_script( 'poseidon-customizer-controls', get_template_directory_uri() . '/js/customizer-controls.js', array(), '20170806', true );
+}
+add_action( 'customize_controls_enqueue_scripts', 'poseidon_customizer_controls_js' );
 
 
 /**
  * Embed CSS styles for the theme options in the Customizer
  */
 function poseidon_customize_preview_css() {
-	wp_enqueue_style( 'poseidon-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20161205' );
+	wp_enqueue_style( 'poseidon-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20170806' );
 }
 add_action( 'customize_controls_print_styles', 'poseidon_customize_preview_css' );
 

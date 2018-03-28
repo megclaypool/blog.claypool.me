@@ -413,7 +413,7 @@ if (!function_exists('centilium_theme_by')){
 	function centilium_theme_by(){
 		?>
 		<div class="designed-by">
-			<p><?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'centilium' ), '<span> Centilium </span>', '<a href="//www.icynets.com" target="_blank" rel="nofollow">icyNETS</a>' ); ?></p>
+			<p><?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'centilium' ), '<span><a href="//www.icynets.com" target="_blank">Centilium</a> </span>', 'icyNETS' ); ?></p>
 		</div>
 		<?php
 	}

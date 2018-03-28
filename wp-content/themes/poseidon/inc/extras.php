@@ -40,6 +40,21 @@ function poseidon_body_classes( $classes ) {
 		$classes[] = 'post-layout-small';
 	}
 
+	// Hide Date?
+	if ( false === $theme_options['meta_date'] ) {
+		$classes[] = 'date-hidden';
+	}
+
+	// Hide Author?
+	if ( false === $theme_options['meta_author'] ) {
+		$classes[] = 'author-hidden';
+	}
+
+	// Hide Categories?
+	if ( false === $theme_options['meta_category'] ) {
+		$classes[] = 'categories-hidden';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'poseidon_body_classes' );
@@ -67,6 +82,19 @@ function poseidon_hide_elements() {
 		$elements[] = '.site-description';
 	}
 
+	// Hide Post Tags?
+	if ( false === $theme_options['meta_tags'] ) {
+		$elements[] = '.type-post .entry-footer .entry-tags';
+	}
+
+	// Hide Post Navigation?
+	if ( false === $theme_options['post_navigation'] ) {
+		$elements[] = '.type-post .entry-footer .post-navigation';
+	}
+
+	// Allow plugins to add own elements.
+	$elements = apply_filters( 'poseidon_hide_elements', $elements );
+
 	// Return early if no elements are hidden.
 	if ( empty( $elements ) ) {
 		return;
@@ -74,10 +102,7 @@ function poseidon_hide_elements() {
 
 	// Create CSS.
 	$classes = implode( ', ', $elements );
-	$custom_css = $classes . ' {
-	position: absolute;
-	clip: rect(1px, 1px, 1px, 1px);
-}';
+	$custom_css = $classes . ' { position: absolute; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; overflow: hidden; }';
 
 	// Add Custom CSS.
 	wp_add_inline_style( 'poseidon-stylesheet', $custom_css );
@@ -104,17 +129,6 @@ function poseidon_excerpt_length( $length ) {
 	endif;
 }
 add_filter( 'excerpt_length', 'poseidon_excerpt_length' );
-
-
-/**
- * Function to change excerpt length for posts in category posts widgets
- *
- * @param int $length Length of excerpt in number of words.
- * @return int
- */
-function poseidon_magazine_posts_excerpt_length( $length ) {
-	return 15;
-}
 
 
 /**

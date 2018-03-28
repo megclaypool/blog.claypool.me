@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2017 ServMask Inc.
+ * Copyright (C) 2014-2018 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,7 +25,7 @@
 
 class Ai1wm_Http {
 
-	public static function get( $url, $params = array(), Ai1wm_Http_Abstract $client = null ) {
+	public static function get( $url, $params = array(), Ai1wm_Http_Abstract $http = null ) {
 
 		// Get IP address
 		$ip = get_option( AI1WM_URL_IP );
@@ -40,31 +40,31 @@ class Ai1wm_Http {
 		$port = parse_url( $url, PHP_URL_PORT );
 
 		// Set HTTP client
-		if ( is_null( $client ) ) {
-			$client = Ai1wm_Http_Factory::create( $adapter );
+		if ( empty( $http ) ) {
+			$http = Ai1wm_Http_Factory::create( $adapter );
 		}
 
 		// Set HTTP host
 		if ( empty( $port ) ) {
-			$client->set_header( 'Host', $host );
+			$http->set_header( 'Host', $host );
 		} else {
-			$client->set_header( 'Host', "{$host}:{$port}" );
+			$http->set_header( 'Host', "{$host}:{$port}" );
 		}
 
 		// Set HTTP authorization
 		if ( ( $user = get_option( AI1WM_AUTH_USER ) ) && ( $password = get_option( AI1WM_AUTH_PASSWORD ) ) ) {
 			if ( ( $hash = base64_encode( "{$user}:{$password}" ) ) ) {
-				$client->set_header( 'Authorization', "Basic {$hash}" );
+				$http->set_header( 'Authorization', "Basic {$hash}" );
 			}
 		}
 
 		$blocking = false;
 
 		// Run non-blocking HTTP request
-		$client->get( add_query_arg( ai1wm_urlencode( $params ), str_replace( "//{$host}", "//{$ip}", $url ) ), $blocking );
+		$http->get( add_query_arg( ai1wm_urlencode( $params ), str_replace( "//{$host}", "//{$ip}", $url ) ), $blocking );
 	}
 
-	public static function resolve( $url, $params = array(), Ai1wm_Http_Abstract $client = null ) {
+	public static function resolve( $url, $params = array(), Ai1wm_Http_Abstract $http = null ) {
 
 		// Reset IP address and adapter
 		delete_option( AI1WM_URL_IP );
@@ -82,7 +82,7 @@ class Ai1wm_Http {
 		// Set server IP address
 		if ( ! empty( $_SERVER['SERVER_ADDR'] ) ) {
 			$server = $_SERVER['SERVER_ADDR'];
-		} else if ( ! empty( $_SERVER['LOCAL_ADDR'] ) ) {
+		} elseif ( ! empty( $_SERVER['LOCAL_ADDR'] ) ) {
 			$server = $_SERVER['LOCAL_ADDR'];
 		} else {
 			$server = '127.0.0.1';
@@ -108,28 +108,28 @@ class Ai1wm_Http {
 				) );
 
 				// Set HTTP client
-				if ( is_null( $client ) ) {
-					$client = Ai1wm_Http_Factory::create( $adapter );
+				if ( empty( $http ) ) {
+					$http = Ai1wm_Http_Factory::create( $adapter );
 				}
 
 				// Set HTTP host
 				if ( empty( $port ) ) {
-					$client->set_header( 'Host', $host );
+					$http->set_header( 'Host', $host );
 				} else {
-					$client->set_header( 'Host', "{$host}:{$port}" );
+					$http->set_header( 'Host', "{$host}:{$port}" );
 				}
 
 				// Set HTTP authorization
 				if ( ( $user = get_option( AI1WM_AUTH_USER ) ) && ( $password = get_option( AI1WM_AUTH_PASSWORD ) ) ) {
 					if ( ( $hash = base64_encode( "{$user}:{$password}" ) ) ) {
-						$client->set_header( 'Authorization', "Basic {$hash}" );
+						$http->set_header( 'Authorization', "Basic {$hash}" );
 					}
 				}
 
 				$blocking = true;
 
 				// Run blocking HTTP request
-				$client->get( add_query_arg( ai1wm_urlencode( $params ), str_replace( "//{$host}", "//{$ip}", $url ) ), $blocking );
+				$http->get( add_query_arg( ai1wm_urlencode( $params ), str_replace( "//{$host}", "//{$ip}", $url ) ), $blocking );
 
 				// Flush WP cache
 				ai1wm_cache_flush();
@@ -140,7 +140,7 @@ class Ai1wm_Http {
 				}
 
 				// Reset HTTP client
-				$client = null;
+				$http = null;
 			}
 		}
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2017 ServMask Inc.
+ * Copyright (C) 2014-2018 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -32,7 +32,7 @@ class Ai1wm_Database_Mysql extends Ai1wm_Database {
 	 * @return resource
 	 */
 	public function query( $input ) {
-		return mysql_unbuffered_query( $input, $this->wpdb->dbh );
+		return mysql_query( $input, $this->wpdb->dbh );
 	}
 
 	/**
@@ -41,12 +41,12 @@ class Ai1wm_Database_Mysql extends Ai1wm_Database {
 	 * @param  string $input String to escape
 	 * @return string
 	 */
-	public function quote( $input ) {
-		return "'" . mysql_real_escape_string( $input, $this->wpdb->dbh ) . "'";
+	public function escape( $input ) {
+		return mysql_real_escape_string( $input, $this->wpdb->dbh );
 	}
 
 	/**
-	 * Returns the error code for the most recent function call
+	 * Return the error code for the most recent function call
 	 *
 	 * @return int
 	 */
@@ -55,7 +55,7 @@ class Ai1wm_Database_Mysql extends Ai1wm_Database {
 	}
 
 	/**
-	 * Returns a string description of the last error
+	 * Return a string description of the last error
 	 *
 	 * @return string
 	 */
@@ -90,6 +90,16 @@ class Ai1wm_Database_Mysql extends Ai1wm_Database {
 	 */
 	public function fetch_row( $result ) {
 		return mysql_fetch_row( $result );
+	}
+
+	/**
+	 * Return the number for rows from MySQL results
+	 *
+	 * @param  resource $result MySQL resource
+	 * @return int
+	 */
+	public function num_rows( $result ) {
+		return mysql_num_rows( $result );
 	}
 
 	/**

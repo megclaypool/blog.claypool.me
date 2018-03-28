@@ -119,7 +119,7 @@ abstract class Publicize_Base {
 	abstract function connect_url( $service_name );
 	abstract function disconnect_url( $service_name, $id );
 	abstract function get_connection_meta( $connection );
-	abstract function get_services( $filter );
+	abstract function get_services( $filter = 'all' );
 	abstract function get_connections( $service, $_blog_id = false, $_user_id = false );
 	abstract function get_connection( $service, $id, $_blog_id = false, $_user_id = false );
 	abstract function flag_post_for_publicize( $new_status, $old_status, $post );
@@ -260,7 +260,7 @@ abstract class Publicize_Base {
 
 	/**
 	* Fires when a post is saved, checks conditions and saves state in postmeta so that it
-	* can be picked up later by @see ::publicize_post()
+	* can be picked up later by @see ::publicize_post() on WordPress.com codebase.
 	*/
 	function save_meta( $post_id, $post ) {
 		$cron_user = null;

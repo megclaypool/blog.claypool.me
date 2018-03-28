@@ -6,11 +6,12 @@
  */
 
 /**
- * Poseidon only works in WordPress 4.4 or later.
+ * Poseidon only works in WordPress 4.7 or later.
  */
-if ( version_compare( $GLOBALS['wp_version'], '4.4-alpha', '<' ) ) :
+if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
-endif;
+	return;
+}
 
 
 if ( ! function_exists( 'poseidon_setup' ) ) :
@@ -114,7 +115,7 @@ function poseidon_widgets_init() {
 	register_sidebar( array(
 		'name' => esc_html__( 'Magazine Homepage', 'poseidon' ),
 		'id' => 'magazine-homepage',
-		'description' => esc_html__( 'Appears on Magazine Homepage template only. You can use the Magazine Posts widgets here.', 'poseidon' ),
+		'description' => esc_html__( 'Appears on blog index and Magazine Homepage template. You can use the Magazine widgets here.', 'poseidon' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<div class="widget-header"><h3 class="widget-title">',
@@ -225,7 +226,11 @@ require get_template_directory() . '/inc/addons.php';
 // Include Post Slider Setup.
 require get_template_directory() . '/inc/slider.php';
 
+// Include Magazine Functions.
+require get_template_directory() . '/inc/magazine.php';
+
 // Include Widget Files.
-require get_template_directory() . '/inc/widgets/widget-magazine-posts-boxed.php';
 require get_template_directory() . '/inc/widgets/widget-magazine-posts-columns.php';
 require get_template_directory() . '/inc/widgets/widget-magazine-posts-grid.php';
+require get_template_directory() . '/inc/widgets/widget-magazine-posts-horizontal-box.php';
+require get_template_directory() . '/inc/widgets/widget-magazine-posts-vertical-box.php';

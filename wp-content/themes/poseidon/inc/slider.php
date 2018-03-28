@@ -25,26 +25,15 @@ function poseidon_slider_scripts() {
 		wp_enqueue_script( 'jquery-flexslider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array( 'jquery' ), '2.6.0' );
 
 		// Register and enqueue slider setup.
-		wp_enqueue_script( 'poseidon-slider', get_template_directory_uri() . '/js/slider.js', array( 'jquery-flexslider' ) );
+		wp_enqueue_script( 'poseidon-slider', get_template_directory_uri() . '/js/slider.js', array( 'jquery-flexslider' ), '20170421' );
 
 		// Register and enqueue slider CSS.
-		wp_enqueue_style( 'poseidon-slider', get_template_directory_uri() . '/css/flexslider.css' );
+		wp_enqueue_style( 'poseidon-slider', get_template_directory_uri() . '/css/flexslider.css', array(), '20170421' );
 
 	endif;
 
 }
 add_action( 'wp_enqueue_scripts', 'poseidon_slider_scripts' );
-
-
-/**
- * Function to change excerpt length for post slider
- *
- * @param int $length Length of excerpt in number of words.
- * @return int
- */
-function poseidon_slider_excerpt_length( $length ) {
-	return 25;
-}
 
 
 /**
@@ -90,5 +79,49 @@ function poseidon_slider() {
 		get_template_part( 'template-parts/post-slider' );
 
 	}
-
 }
+
+
+
+if ( ! function_exists( 'poseidon_slider_excerpt_length' ) ) :
+	/**
+	 * Function to change excerpt length for post slider
+	 *
+	 * @param int $length Length of excerpt in number of words.
+	 * @return int
+	 */
+	function poseidon_slider_excerpt_length( $length ) {
+		return 25;
+	}
+endif;
+
+
+if ( ! function_exists( 'poseidon_slider_image' ) ) :
+	/**
+	 * Displays the featured image of the post as slider image
+	 *
+	 * @param string $size Post thumbnail size.
+	 * @param array  $attr Post thumbnail attributes.
+	 */
+	function poseidon_slider_image( $size = 'post-thumbnail', $attr = array() ) {
+
+		// Display Post Thumbnail.
+		if ( has_post_thumbnail() ) : ?>
+
+			<a class="slide-image-link" href="<?php the_permalink(); ?>" rel="bookmark">
+				<figure class="slide-image-wrap">
+					<?php the_post_thumbnail( $size, $attr ); ?>
+				</figure>
+			</a>
+
+		<?php else : ?>
+
+			<a class="slide-image-link" href="<?php the_permalink(); ?>" rel="bookmark">
+				<figure class="slide-image-wrap">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/default-slider-image.png" class="slide-image default-slide-image wp-post-image" />
+				</figure>
+			</a>
+
+		<?php endif;
+	}
+endif;

@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2017 ServMask Inc.
+ * Copyright (C) 2014-2018 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -38,7 +38,7 @@ class Ai1wm_Cron {
 		$args      = array_slice( func_get_args(), 2 );
 		$schedules = wp_get_schedules();
 
-		if ( isset( $schedules[$recurrence] ) && ( $current = $schedules[$recurrence] ) ) {
+		if ( isset( $schedules[ $recurrence ] ) && ( $current = $schedules[ $recurrence ] ) ) {
 			return wp_schedule_event( time() + $current['interval'], $recurrence, $hook, $args );
 		}
 	}
@@ -57,12 +57,12 @@ class Ai1wm_Cron {
 		}
 
 		foreach ( $crons as $timestamp => $cron ) {
-			if ( ! empty( $cron[$hook] ) )  {
-				unset( $crons[$timestamp][$hook] );
+			if ( ! empty( $cron[ $hook ] ) ) {
+				unset( $crons[ $timestamp ][ $hook ] );
 
 				// Unset empty timestamps
-				if ( empty( $crons[$timestamp] ) ) {
-					unset( $crons[$timestamp] );
+				if ( empty( $crons[ $timestamp ] ) ) {
+					unset( $crons[ $timestamp ] );
 				}
 			}
 		}
